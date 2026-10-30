@@ -1,0 +1,19 @@
+[
+  {
+    "id": "SPARK-REQ-20261030-2331",
+    "status": "REQUEST_RECEIVED",
+    "receivedAt": "2026-10-30T18:13:31.856Z",
+    "customer": {
+      "name": "Ananya Roy",
+      "phone": "9876543210"
+    },
+    "appointment": {
+      "category": "hair",
+      "service": "Designer Haircut & Blowdry",
+      "stylist": "Senior Hair Director",
+      "date": "2026-11-05",
+      "timeSlot": "11:30 AM - 12:30 PM",
+      "notes": "Looking for balayage consultation as well"
+    }
+  }
+]
