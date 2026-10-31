@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, Phone, Calendar, Clock, MapPin } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
 import { Button } from "@/components/common/Button";
@@ -9,49 +10,35 @@ import { LiveStatusBadge } from "@/components/common/LiveStatusBadge";
 import { siteConfig } from "@/config/siteConfig";
 
 export const Navbar: React.FC = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-
-      // Track active section for highlight
-      const sections = ["home", "about", "services", "experience", "gallery", "offers", "contact"];
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 120 && rect.bottom >= 120) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
+      setIsScrolled(window.scrollY > 30);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile drawer on route/anchor change
+  // Close mobile drawer on route change
+  useEffect(() => {
+    setIsMobileOpen(false);
+  }, [pathname]);
+
   const handleNavClick = () => {
     setIsMobileOpen(false);
   };
 
   const navLinks = [
-    { label: "Home", href: "#home", id: "home" },
-    { label: "About", href: "#about", id: "about" },
-    { label: "Services", href: "#services", id: "services" },
-    { label: "Experience", href: "#experience", id: "experience" },
-    { label: "Gallery", href: "#gallery", id: "gallery" },
-    { label: "Offers", href: "#offers", id: "offers" },
-    { label: "Contact", href: "#contact", id: "contact" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Services", href: "/services" },
+    { label: "Our Space", href: "/space" },
+    { label: "Offers", href: "/offers" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -59,8 +46,8 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-neutral-950/90 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.7)] py-3"
-            : "bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5"
+            ? "bg-neutral-950/95 backdrop-blur-xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.7)] py-3"
+            : "bg-gradient-to-b from-black/85 via-black/45 to-transparent py-4 sm:py-5"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,11 +63,16 @@ export const Navbar: React.FC = () => {
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
               {navLinks.map((link) => {
-                const isActive = activeSection === link.id;
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
+                    aria-current={isActive ? "page" : undefined}
                     className={`relative px-3 py-2 text-xs font-sans tracking-[0.18em] uppercase transition-all duration-300 ${
                       isActive
                         ? "text-spark-gold font-medium"
@@ -112,20 +104,20 @@ export const Navbar: React.FC = () => {
               <Button
                 variant="primary"
                 size="sm"
-                href="#booking"
-                leftIcon={<Calendar className="w-3.5 h-3.5" />}
+                href="/book"
+                className="shadow-[0_4px_20px_rgba(200,169,107,0.3)] hover:shadow-[0_4px_25px_rgba(200,169,107,0.5)]"
               >
                 Book Appointment
               </Button>
             </div>
 
-            {/* Mobile Hamburger Button */}
-            <div className="flex items-center space-x-3 lg:hidden">
+            {/* Mobile Controls (Live badge + Book button + Hamburger) */}
+            <div className="flex items-center space-x-2 sm:space-x-3 lg:hidden">
               <Button
                 variant="primary"
                 size="sm"
-                href="#booking"
-                className="px-3 py-2 text-[10px]"
+                href="/book"
+                className="text-[11px] px-3 py-1.5 h-auto sm:h-9"
               >
                 Book
               </Button>
@@ -133,7 +125,7 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
-                className="p-2 text-neutral-300 hover:text-spark-gold focus:outline-none transition-colors border border-white/10 rounded-sm bg-neutral-900/60"
+                className="p-2 text-neutral-300 hover:text-white focus:outline-none focus:ring-1 focus:ring-spark-gold"
                 aria-label={isMobileOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileOpen}
               >
@@ -187,17 +179,29 @@ export const Navbar: React.FC = () => {
 
             {/* Links */}
             <nav className="mt-6 flex flex-col space-y-1">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={handleNavClick}
-                  className="px-4 py-3 text-sm font-sans tracking-[0.2em] uppercase text-neutral-200 hover:text-spark-gold hover:bg-white/5 transition-colors flex items-center justify-between border-b border-white/5"
-                >
-                  <span>{link.label}</span>
-                  <span className="text-spark-gold/50 text-xs">→</span>
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={handleNavClick}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`px-4 py-3 text-sm font-sans tracking-[0.2em] uppercase transition-colors flex items-center justify-between border-b border-white/5 ${
+                      isActive
+                        ? "text-spark-gold font-semibold bg-white/5"
+                        : "text-neutral-200 hover:text-spark-gold hover:bg-white/5"
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                    <span className="text-spark-gold/50 text-xs">→</span>
+                  </Link>
+                );
+              })}
             </nav>
           </div>
 
@@ -218,7 +222,7 @@ export const Navbar: React.FC = () => {
               <Button
                 variant="primary"
                 size="md"
-                href="#booking"
+                href="/book"
                 onClick={handleNavClick}
                 className="w-full justify-center"
               >

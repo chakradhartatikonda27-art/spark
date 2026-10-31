@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>SPARK Salon — Your Style. Your Statement.</title>
+  <meta name="description" content="Discover exceptional hair, beauty, and grooming experiences at SPARK Salon." />
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/spark-mark.png" />
+  <link rel="apple-touch-icon" href="images/spark-mark.png" />
+
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Global SVG Definitions -->
+  <svg width="0" height="0" style="position:absolute; display:none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f3dba3" />
+        <stop offset="50%" stop-color="#c9a45c" />
+        <stop offset="100%" stop-color="#9a7634" />
+      </linearGradient>
+
+      <symbol id="flame" viewBox="0 0 64 84">
+        <g fill="url(#gold-grad)">
+          <path d="M12 26C-3 42 -1 64 14 74C21 79 27 78 31 74C23 72 15 70 10 60C5 50 8 38 12 26Z"/>
+          <path d="M24 14C9 30 11 52 26 62C33 67 39 66 43 62C35 60 27 58 22 48C17 38 20 26 24 14Z"/>
+          <path d="M36 26C21 42 23 64 38 74C45 79 51 78 55 74C47 72 39 70 34 60C29 50 32 38 36 26Z"/>
+          <path d="M26 4l1.4 4.1L31.5 9.5l-4.1 1.4L26 15l-1.4-4.1L20.5 9.5l4.1-1.4z" transform="translate(7 -2)"/>
+        </g>
+      </symbol>
+
+      <symbol id="arr" viewBox="0 0 16 16">
+        <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-scissors" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+          <path d="M8.5 7.5L20 18M8.5 16.5L20 6"/>
+        </g>
+      </symbol>
+
+      <symbol id="i-sparkle" viewBox="0 0 24 24">
+        <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-drop" viewBox="0 0 24 24">
+        <path d="M12 3c3.5 4.5 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 2.5-6.5 6-11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-crown" viewBox="0 0 24 24">
+        <path d="M3 18l-1-11 6 5 4-8 4 8 6-5-1 11H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/>
+        </g>
+      </symbol>
+
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3zM8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>
+        </g>
+      </symbol>
+
+      <symbol id="i-leaf" viewBox="0 0 24 24">
+        <path d="M5 19C5 10 10 5 20 4c0 10-5 15-14 15zM5 19l8-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-chat" viewBox="0 0 24 24">
+        <path d="M4 5h16v11H9l-5 4V5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-play" viewBox="0 0 12 12">
+        <path d="M2 1l9 5-9 5z" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Curtain Splash Screen (Luxury Entrance) -->
+  <div class="cur" id="cur" aria-hidden="true">
+    <a class="logo lg" href="#home" aria-label="SPARK Salon">
+      <img src="images/spark-logo.png" alt="SPARK — Hair · Skin · Nails · Makeup" />
+    </a>
+  </div>
+
+  <!-- Top Progress Bar -->
+  <div class="pg" id="pg"></div>
+
+  <!-- Header & Navigation -->
+  <header class="nav" id="nav">
+    <div class="wrap">
+      <a href="#home" class="logo" aria-label="SPARK — home">
+        <img src="images/spark-logo.png" alt="SPARK — Hair · Skin · Nails · Makeup" />
+      </a>
+
+      <!-- Matching Navbar from Screenshot 1 & 2 -->
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team-sec">Team</a>
+        <a href="#space">Gallery</a>
+        <a href="#offers">Offers</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap: 10px;">
+        <a href="#book" class="btn btn-gold nav-cta">Book Appointment</a>
+        <button
+          class="burger"
+          id="burger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="menu" id="menu" aria-label="Mobile Navigation">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team-sec">Team</a>
+      <a href="#story">Our Story</a>
+      <a href="#space">Our Space</a>
+      <a href="#offers">Special Offers</a>
+      <a href="#contact">Contact &amp; Hours</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="ctas">
+      <a href="#book" class="btn btn-gold">Book Appointment</a>
+      <a href="tel:+919390560625" class="btn btn-ring">Call Salon Concierge</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-label="Welcome to SPARK Salon">
+      <div
+        class="hero-blur"
+        id="hero-blur"
+        style="background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80')"
+      ></div>
+      <div class="hero-ov"></div>
+      <div
+        class="hero-img"
+        id="hero-img"
+        role="img"
+        aria-label="SPARK Luxury Beauty Salon Suite"
+        style="background-image:url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80')"
+      ></div>
+
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="tag" style="animation-delay: 0.15s">Beauty · Style · Confidence</p>
+          <h1>
+            <span class="ln"><span style="--dl: 0.3s">Your Style.</span></span>
+            <em class="ln"><span style="--dl: 0.5s">Your Statement.</span></em>
+          </h1>
+          <p class="sub" style="animation-delay: 0.65s">
+            Discover exceptional hair couture, advanced clinical aesthetic skincare, and executive grooming crafted around your personal aesthetic.
+          </p>
+          <div class="ctas" style="animation-delay: 0.8s">
+            <a href="#book" class="btn btn-gold">
+              Book Your Appointment <svg><use href="#arr"/></svg>
+            </a>
+            <a href="#services" class="btn btn-ring">Explore Signature Menu</a>
+          </div>
+        </div>
+
+        <div class="hero-foot" style="animation-delay: 0.95s">
+          <div class="stats">
+            <div><b>24<i>+</i></b><span>Services</span></div>
+            <div><b>4</b><span>Specialized Studios</span></div>
+            <div><b>Unisex</b><span>Welcoming Everyone</span></div>
+            <div><b>1:1</b><span>Private Consultation</span></div>
+          </div>
+          <div class="thumbs" id="thumbs" aria-label="Hero ambiance preview"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker Marquee -->
+    <div class="mq" aria-hidden="true">
+      <div id="mq"></div>
+    </div>
+
+    <!-- 01: Signature Services Grid -->
+    <section id="about" class="sec" data-n="01">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Signature Services</p>
+            <h2 class="h2">Complete Beauty &amp; Grooming<br>for <em>Everyone</em></h2>
+            <p class="sub">
+              From dimensional French balayage to Korean glass-skin medi-facials, our master stylists tailor every service to your individual aesthetic.
+            </p>
+          </div>
+          <a href="#book" class="btn btn-ol rv">Book Any Service</a>
+        </div>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- 02: Service Menu & Categories -->
+    <section id="services" class="sec" data-n="02" style="padding-top:0">
+      <div class="wrap">
+        <div class="sh" style="margin-bottom:0">
+          <div class="rv">
+            <p class="tag">Curated Price Menu</p>
+            <h2 class="h2">Discover Your <em>Signature</em> Style</h2>
+            <p class="sub">Select a category below to explore transparent pricing and service breakdowns.</p>
+          </div>
+        </div>
+
+        <div class="tabs" id="tabs" role="tablist" aria-label="Salon Service Categories"></div>
+        <div class="menu-wrap tabbed" id="menu-wrap"></div>
+        <p class="note">
+          ✦ Note: Prices are transparent baseline rates. Final pricing depends on hair length, density, and customized formulations confirmed during consultation.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03: The Vision Behind SPARK (Founder Story - Exact Match to Screenshot 1) -->
+    <section id="story" class="sec" data-n="03">
+      <div class="wrap">
+        <div class="fd">
+          <!-- Founder Photo Frame with Gold Inner Border -->
+          <div class="fd-ph rv" data-d="1">
+            <div class="ph-empty">
+              <svg aria-hidden="true"><use href="#i-user"/></svg>
+              <span>FOUNDER PHOTO<br>TO BE ADDED</span>
+            </div>
+          </div>
+
+          <!-- Founder Story Content -->
+          <div id="fd-story" class="rv" data-d="2">
+            <p class="tag">— OUR STORY</p>
+            <h2 class="h2">The Vision Behind<br><em>SPARK</em></h2>
+            <p>
+              The founder's story will be shared here: how SPARK began, the vision behind it, and the promise made to every client.
+            </p>
+            <p class="ph-note">Details to be provided by the salon.</p>
+            <div class="fd-sig">
+              <b>Srinivas Uppala</b>
+              <small>FOUNDER</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04: Why Choose SPARK (Exact Match to Screenshot 3) -->
+    <section id="why" class="sec dk why">
+      <div
+        class="why-bg"
+        style="background-image:url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=80')"
+      ></div>
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">— WHY CHOOSE SPARK</p>
+            <h2 class="h2">More Than a Salon.<br>Your Personal <em>Style Destination.</em></h2>
+          </div>
+        </div>
+
+        <div class="feat">
+          <!-- 1: Professional beauty & grooming -->
+          <div class="rv" data-d="1">
+            <div class="i"><svg><use href="#i-scissors"/></svg></div>
+            <b>Professional beauty &amp; grooming</b>
+            <span>Trained professionals</span>
+          </div>
+
+          <!-- 2: Personalised styling -->
+          <div class="rv" data-d="2">
+            <div class="i"><svg><use href="#i-user"/></svg></div>
+            <b>Personalised styling</b>
+            <span>Consultation first</span>
+          </div>
+
+          <!-- 3: Welcoming unisex environment -->
+          <div class="rv" data-d="3">
+            <div class="i"><svg><use href="#i-heart"/></svg></div>
+            <b>Welcoming unisex environment</b>
+            <span>Comfortable for everyone</span>
+          </div>
+
+          <!-- 4: Modern salon atmosphere -->
+          <div class="rv" data-d="1">
+            <div class="i"><svg><use href="#i-sparkle"/></svg></div>
+            <b>Modern salon atmosphere</b>
+            <span>Calm, contemporary interiors</span>
+          </div>
+
+          <!-- 5: Customer-focused experience -->
+          <div class="rv" data-d="2">
+            <div class="i"><svg><use href="#i-chat"/></svg></div>
+            <b>Customer-focused experience</b>
+            <span>Clear, attentive service</span>
+          </div>
+
+          <!-- 6: Attention to detail -->
+          <div class="rv" data-d="3">
+            <div class="i"><svg><use href="#i-eye"/></svg></div>
+            <b>Attention to detail</b>
+            <span>From consult to finish</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05: Transformations Slider -->
+    <section id="transformations" class="sec dk2" data-n="05">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Proven Excellence</p>
+            <h2 class="h2">Real Transformations,<br><em>Zero Filter</em></h2>
+            <p class="sub">Slide left or right to inspect the true difference achieved by our master technicians.</p>
+          </div>
+          <a href="#book" class="btn btn-gold rv">Start Your Transformation</a>
+        </div>
+
+        <div class="wk">
+          <!-- Slide 1: Balayage -->
+          <div class="ba rv" data-d="1">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Before Hair Transformation" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="After French Balayage" />
+            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for French Balayage" />
+          </div>
+
+          <!-- Slide 2: Glass Skin Facial -->
+          <div class="ba rv" data-d="2">
+            <img src="https://images.unsplash.com/photo-1512290900672-1f5076eb43df?auto=format&fit=crop&w=800&q=80" alt="Before Skin Therapy" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="After Glass Glow Medi-Facial" />
+            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for Glass Glow Facial" />
+          </div>
+
+          <!-- Slide 3: Beard & Fade -->
+          <div class="ba rv" data-d="3">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Before Grooming" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="After Precision Taper & Beard Sculpt" />
+            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for Beard Sculpting" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06: A Glimpse of Our Space (Video Gallery - Exact Match to Screenshot 2) -->
+    <section id="space" class="sec dk" data-n="06">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">— OUR SALON</p>
+            <h2 class="h2">A Glimpse of <em>Our Space</em></h2>
+          </div>
+        </div>
+
+        <div class="space-grid">
+          <!-- Card 1: Backlit Logo Sign -->
+          <div class="space-card rv" data-d="1" data-video="/videos/spark-billboard-reveal.mp4" data-title="SPARK Signature 3D Emblem">
+            <img src="/images/posters/spark-billboard-reveal-poster.png" alt="SPARK Signature Emblem Sign" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Signature Emblem</div>
+          </div>
+
+          <!-- Card 2: Reception Desk -->
+          <div class="space-card rv" data-d="2" data-video="/videos/spark-reception-gold.mp4" data-title="Champagne Gold Reception Desk">
+            <img src="/images/posters/spark-reception-gold-poster.png" alt="SPARK Reception Desk" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Reception Suite</div>
+          </div>
+
+          <!-- Card 3: Sculptural Lounge -->
+          <div class="space-card rv" data-d="3" data-video="/videos/spark-lounge-interior.mp4" data-title="Sculpted Organic Columns & Lounge">
+            <img src="/images/posters/spark-lounge-interior-poster.png" alt="Sculpted Columns Lounge" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Ambient Lounge</div>
+          </div>
+
+          <!-- Card 4: Ganesha Shrine -->
+          <div class="space-card rv" data-d="4" data-video="/videos/spark-entrance-walkthrough.mp4" data-title="Tranquil Sanctuary Alcove">
+            <img src="/images/posters/spark-entrance-walkthrough-poster.png" alt="Sanctuary Ganesha Alcove" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Sanctuary Alcove</div>
+          </div>
+
+          <!-- Card 5: Curved Display Shelves -->
+          <div class="space-card rv" data-d="5" data-video="/videos/spark-styling-consultation.mp4" data-title="Illuminated Haircare & Styling Bar">
+            <img src="/images/posters/spark-styling-consultation-poster.png" alt="Curved Display Shelves" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Treatment Lab</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07: Meet Our Stylists -->
+    <section id="team-sec" class="sec dk2" data-n="07">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Master Technicians</p>
+            <h2 class="h2">The Talent Behind<br>Your <em>Confidence</em></h2>
+            <p class="sub">Meet our licensed creative leads, trained in global styling centers and aesthetic academies.</p>
+          </div>
+        </div>
+        <div class="team" id="team"></div>
+      </div>
+    </section>
+
+    <!-- 08: Booking Appointment Section -->
+    <section id="book" class="sec" data-n="08">
+      <div class="wrap">
+        <div class="bk">
+          <!-- Booking Left Column -->
+          <div>
+            <div class="rv">
+              <p class="tag">Priority Reservations</p>
+              <h2 class="h2">Reserve Your <em>Signature</em> Session</h2>
+              <p class="sub">
+                Step into refined luxury. Book online in 60 seconds and our concierge team will reserve your designated specialist.
+              </p>
+            </div>
+
+            <div class="steps">
+              <div class="step rv" data-d="1">
+                <i>1</i>
+                <div>
+                  <b>Select Preferred Treatment</b>
+                  <span>Choose from hair, aesthetics, skin, or complete bridal packages.</span>
+                </div>
+              </div>
+              <div class="step rv" data-d="2">
+                <i>2</i>
+                <div>
+                  <b>Choose Preferred Date &amp; Time</b>
+                  <span>Flexible morning, afternoon, or evening lounge slots available.</span>
+                </div>
+              </div>
+              <div class="step rv" data-d="3">
+                <i>3</i>
+                <div>
+                  <b>Instant WhatsApp Confirmation</b>
+                  <span>Direct calendar invite and reminders sent straight to your mobile.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Right Column (Form Card) -->
+          <div class="form-card rv">
+            <form id="booking-form" novalidate>
+              <div class="fgrid">
+                <div>
+                  <label class="label" for="b-name">Your Full Name *</label>
+                  <input
+                    class="field"
+                    type="text"
+                    id="b-name"
+                    name="name"
+                    placeholder="e.g. Radhika Sharma"
+                    required
+                    autocomplete="name"
+                  />
+                  <div class="fe">Please enter your full name.</div>
+                </div>
+
+                <div>
+                  <label class="label" for="b-phone">WhatsApp / Mobile Number *</label>
+                  <input
+                    class="field"
+                    type="tel"
+                    id="b-phone"
+                    name="phone"
+                    placeholder="e.g. 93905 60625"
+                    pattern="[0-9]{10}"
+                    required
+                    autocomplete="tel"
+                  />
+                  <div class="fe">Please provide a valid 10-digit mobile number.</div>
+                </div>
+
+                <div class="full">
+                  <label class="label" for="b-service">Desired Treatment *</label>
+                  <select class="field" id="b-service" name="service" required>
+                    <option value="" disabled selected>Select from our signature services...</option>
+                    <optgroup label="Hair Care &amp; Color">
+                      <option value="Couture Precision Haircut & Styling">Couture Precision Haircut &amp; Styling (₹850)</option>
+                      <option value="French Balayage & Tonal Gloss">French Balayage &amp; Tonal Gloss (₹3,800+)</option>
+                      <option value="Global Color & Ammonia-Free Gloss">Global Color &amp; Gloss (₹2,600+)</option>
+                      <option value="Keratin Smooth Therapy">Keratin Smooth Therapy (₹4,500+)</option>
+                      <option value="Botoplex Collagen Reconstruction">Botoplex Collagen Reconstruction (₹3,900+)</option>
+                    </optgroup>
+                    <optgroup label="Skin &amp; Aesthetics">
+                      <option value="Glass Glow Oxygenating Medi-Facial">Glass Glow Oxygenating Medi-Facial (₹2,400)</option>
+                      <option value="Collagen Radiance Firming Ritual">Collagen Radiance Firming Ritual (₹3,200)</option>
+                      <option value="Detox Charcoal Deep Cleanse">Detox Charcoal Deep Cleanse (₹1,800)</option>
+                    </optgroup>
+                    <optgroup label="Gentlemen's Grooming">
+                      <option value="Master Barber Fade & Wash">Master Barber Fade &amp; Wash (₹450)</option>
+                      <option value="Hot Towel Beard Crafting & Oil Press">Hot Towel Beard Crafting (₹350)</option>
+                    </optgroup>
+                    <optgroup label="Bridal &amp; Special Occasions">
+                      <option value="Signature HD Bridal Airbrush Glamour">Signature HD Bridal Airbrush Glamour (₹12,000+)</option>
+                      <option value="Pre-Bridal Radiance Glow Ceremony">Pre-Bridal Radiance Ceremony (₹8,500)</option>
+                    </optgroup>
+                  </select>
+                  <div class="fe">Please select a service.</div>
+                </div>
+
+                <div>
+                  <label class="label" for="b-date">Preferred Date *</label>
+                  <input class="field" type="date" id="b-date" name="date" required />
+                  <div class="fe">Please select a valid date.</div>
+                </div>
+
+                <div>
+                  <label class="label" for="b-time">Preferred Time Slot *</label>
+                  <select class="field" id="b-time" name="time" required>
+                    <option value="" disabled selected>Select time window...</option>
+                    <option value="10:00 AM – 12:00 PM">Morning (10:00 AM – 12:00 PM)</option>
+                    <option value="12:00 PM – 02:00 PM">Afternoon (12:00 PM – 02:00 PM)</option>
+                    <option value="02:00 PM – 05:00 PM">Evening (02:00 PM – 05:00 PM)</option>
+                    <option value="05:00 PM – 08:30 PM">Night Glow (05:00 PM – 08:30 PM)</option>
+                  </select>
+                  <div class="fe">Please pick a time slot.</div>
+                </div>
+
+                <div class="full">
+                  <label class="label" for="b-notes">Special Requests / Hair Concerns (Optional)</label>
+                  <textarea
+                    class="field"
+                    id="b-notes"
+                    name="notes"
+                    rows="3"
+                    placeholder="Share past hair treatments, scalp sensitivity, or inspiration..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="factions">
+                <p>No deposit needed for standard salon consultations. Complimentary organic beverage upon arrival.</p>
+                <button type="submit" class="btn btn-gold">
+                  <span>Confirm Reservation</span>
+                  <div class="spin" aria-hidden="true"></div>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success Confirmation State -->
+            <div class="result" id="booking-result">
+              <div class="ok"><svg><use href="#i-check"/></svg></div>
+              <h3>Reservation Request Received!</h3>
+              <p id="res-summary">Your appointment has been logged. Our concierge will message you on WhatsApp shortly.</p>
+              <div class="ctas">
+                <a href="https://wa.me/919390560625" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+                  Chat on WhatsApp
+                </a>
+                <button type="button" class="again" id="booking-again">Book Another Treatment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09: Studio Lookbook Gallery -->
+    <section id="gallery" class="sec" data-n="09">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Studio Visuals</p>
+            <h2 class="h2">The <em>SPARK</em> Lookbook</h2>
+            <p class="sub">Click any piece to inspect our real client styling, color depth, and salon aesthetic.</p>
+          </div>
+        </div>
+        <div class="gal" id="gal"></div>
+      </div>
+    </section>
+
+    <!-- Native <dialog> Modal Lightbox -->
+    <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+      <div class="lb-content">
+        <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+        <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+        <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+        <figure class="lb-figure">
+          <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+          <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+          <figcaption class="lb-caption">
+            <span id="lb-title">Master Hair Artistry</span>
+            <span id="lb-cat">SPARK Unisex Salon</span>
+          </figcaption>
+        </figure>
+      </div>
+    </dialog>
+
+    <!-- 10: Special Offers Banner -->
+    <section id="offers" class="sec dk" style="padding-top:0">
+      <div class="wrap">
+        <div class="off rv">
+          <div
+            class="off-bg"
+            style="background-image:url('https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=80')"
+          ></div>
+          <div>
+            <p class="tag" style="color:var(--gold)">Limited Time Privileges</p>
+            <h2>First-Time Guest VIP Privilege: <em>20% Off</em></h2>
+            <p>
+              Experience our flagship French Balayage or Glass Glow Medi-Facial with 20% savings on your inaugural visit. Includes complimentary scalp analysis.
+            </p>
+          </div>
+          <div class="ctas">
+            <a href="#book" class="btn btn-gold">Claim Privilege</a>
+            <a href="tel:+919390560625" class="btn btn-ring">Speak with Stylist</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11: Customer Reviews -->
+    <section id="reviews" class="sec" data-n="10">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Guest Stories</p>
+            <h2 class="h2">Words From Our <em>Community</em></h2>
+            <p class="sub">Real feedback from clients who trust SPARK with their hair, skin, and biggest milestones.</p>
+          </div>
+        </div>
+
+        <div class="rev">
+          <article class="rcard rv" data-d="1">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Aarav did an absolute masterpiece with my balayage! The dimension is so seamless, and my hair actually feels healthier than before I walked in."
+            </p>
+            <b>Meghana K.</b>
+            <small>Visakhapatnam · Verified Client</small>
+          </article>
+
+          <article class="rcard rv" data-d="2">
+            <div class="stars">★★★★★</div>
+            <p>
+              "The Korean Glass Glow facial with Priya gave me instant radiance for my reception. The salon is pristine, calm, and effortlessly luxurious."
+            </p>
+            <b>Siddharth Rao</b>
+            <small>Visakhapatnam · Verified Client</small>
+          </article>
+
+          <article class="rcard rv" data-d="3">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Best men's fade and hot-towel beard service in the city. Karan's attention to razor detail and scalp treatment is unmatched."
+            </p>
+            <b>Devendra M.</b>
+            <small>Visakhapatnam · Verified Client</small>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12: Frequently Asked Questions (FAQ) -->
+    <section id="faq" class="sec" data-n="11">
+      <div class="wrap">
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Clarifications</p>
+            <h2 class="h2">Frequently Asked <em>Questions</em></h2>
+            <p class="sub">Everything you need to know before visiting SPARK Beauty Salon.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <details class="rv" data-d="1">
+            <summary>Do I need an appointment, or are walk-ins welcome?</summary>
+            <p>
+              We welcome walk-ins based on real-time station availability. However, we strongly recommend reserving your slot online or via WhatsApp to guarantee zero waiting time with your preferred specialist.
+            </p>
+          </details>
+          <details class="rv" data-d="2">
+            <summary>What haircare and color formulation brands do you use?</summary>
+            <p>
+              We exclusively use genuine professional lines, principally L'Oréal Professionnel Paris (Inoa ammonia-free color, Serie Expert, Absolut Repair Molecular) and certified Botoplex peptide smoothing treatments.
+            </p>
+          </details>
+          <details class="rv" data-d="3">
+            <summary>Are services customized for both men and women?</summary>
+            <p>
+              Yes! SPARK is a complete luxury unisex destination with dedicated zones for women's hair couture &amp; aesthetic facials, alongside an executive barber lounge for men's fades and beard grooming.
+            </p>
+          </details>
+          <details class="rv" data-d="1">
+            <summary>How do bridal bookings and trials work?</summary>
+            <p>
+              We offer comprehensive bridal consultations, skin prep timelines, and trial sessions for hair &amp; makeup. Reach out to our concierge 3 to 6 weeks in advance to schedule your private bridal trial.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13: Contact & Opening Hours -->
+    <section id="contact" class="sec" data-n="12">
+      <div class="wrap">
+        <div class="cg">
+          <!-- Contact Details Column -->
+          <div class="rv">
+            <p class="tag">Visit Our Studio</p>
+            <h2 class="h2">Conveniently Located in <em>Visakhapatnam</em></h2>
+            <p class="sub">
+              Drop by for a consultation, book ahead, or reach out to our concierge for custom bridal packages.
+            </p>
+
+            <div class="rows">
+              <div class="r">
+                <span class="k">Address</span>
+                <span class="v">Main Commercial Boulevard, Opposite City Centre, 2nd Floor, Visakhapatnam, AP 530016</span>
+              </div>
+              <div class="r">
+                <span class="k">Phone</span>
+                <span class="v"><a href="tel:+919390560625">+91 93905 60625</a></span>
+              </div>
+              <div class="r">
+                <span class="k">WhatsApp</span>
+                <span class="v"><a href="https://wa.me/919390560625" target="_blank" rel="noopener noreferrer">+91 93905 60625 (Instant Chat)</a></span>
+              </div>
+              <div class="r">
+                <span class="k">Email</span>
+                <span class="v m"><a href="mailto:contact@sparksalon.in">contact@sparksalon.in</a></span>
+              </div>
+            </div>
+
+            <!-- Live Hours Card -->
+            <div class="hrs" id="hours-widget">
+              <div class="st">
+                <span class="dot" id="live-dot"></span>
+                <span id="live-status-text">Checking salon status...</span>
+              </div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Tuesday – Sunday</td>
+                    <td>9:30 AM – 9:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Monday</td>
+                    <td>10:00 AM – 8:00 PM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Google Maps Iframe Column -->
+          <div class="map rv">
+            <iframe
+              title="SPARK Unisex Salon Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121570.82522770857!2d83.21848154999999!3d17.7385966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943138902b197%3A0x68590d676830c1e2!2sVisakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="fg">
+        <div>
+          <a href="#home" class="logo ft" aria-label="SPARK — home">
+            <img src="images/spark-logo.png" alt="SPARK — Hair · Skin · Nails · Makeup" />
+          </a>
+          <p class="intro">
+            Elevating everyday beauty and personal style through couture hair craftsmanship, advanced skin science, and uncompromised guest hospitality.
+          </p>
+        </div>
+
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Our Craft</a></li>
+            <li><a href="#services">Services Menu</a></li>
+            <li><a href="#story">Founder Story</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#space">Our Space</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Treatments</h5>
+          <ul>
+            <li><a href="#services">French Balayage</a></li>
+            <li><a href="#services">Botoplex Collagen</a></li>
+            <li><a href="#services">Keratin Discipline</a></li>
+            <li><a href="#services">Glass Skin Facials</a></li>
+            <li><a href="#services">Executive Fades</a></li>
+            <li><a href="#services">Airbrush Bridal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Concierge</h5>
+          <ul>
+            <li>Tue–Sun: 9:30 AM – 9 PM</li>
+            <li>Mon: 10:00 AM – 8 PM</li>
+            <li>Visakhapatnam, AP</li>
+            <li><a href="tel:+919390560625">+91 93905 60625</a></li>
+            <li><a href="https://wa.me/919390560625">WhatsApp Direct</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>VIP Privileges</h5>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 10px;">
+            Subscribe to receive priority booking alerts and private seasonal packages.
+          </p>
+          <form class="nl" id="nl-form">
+            <input type="email" placeholder="Your email address" required aria-label="Email for VIP newsletter" />
+            <button type="submit" aria-label="Subscribe to VIP newsletter">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="fb">
+        <div class="wrap">
+          <div>
+            © 2026 SPARK Beauty Salon. All rights reserved. Delivered with pride by Siyantech Global Innovations.
+          </div>
+          <div class="l">
+            <a href="#home">Privacy Policy</a>
+            <a href="#home">Terms of Service</a>
+            <a href="#contact">Guest Safety</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Connect Button -->
+  <a
+    href="https://wa.me/919390560625"
+    class="wa"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat directly with SPARK Salon concierge on WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 2C6.49 2 2 6.48 2 12.018c0 1.954.558 3.844 1.617 5.46L2 22l4.71-1.543a9.99 9.99 0 0 0 5.321 1.561h.004c5.54 0 10.03-4.48 10.03-10.018A10.02 10.02 0 0 0 12.031 2zm0 18.36a8.33 8.33 0 0 1-4.25-1.154l-.305-.181-3.158 1.034 1.054-3.078-.198-.315a8.31 8.31 0 0 1-1.274-4.649c0-4.6 3.75-8.35 8.36-8.35a8.3 8.3 0 0 1 5.91 2.45 8.28 8.28 0 0 1 2.45 5.9c0 4.61-3.75 8.36-8.36 8.36zm4.58-6.24c-.25-.13-1.48-.73-1.71-.82-.23-.08-.39-.13-.56.13-.17.25-.65.82-.8 1-.15.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.28 3.79.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.48-.61 1.69-1.2.21-.58.21-1.08.15-1.19-.06-.11-.23-.17-.48-.3z"/>
+    </svg>
+  </a>
+
+  <!-- Mobile Bottom Sticky Quick-Action Bar -->
+  <nav class="sbar" id="sbar" aria-label="Mobile Quick Actions">
+    <a href="tel:+919390560625">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Us
+    </a>
+    <a href="#book" class="bk">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Appointment
+    </a>
+    <a href="https://wa.me/919390560625" target="_blank" rel="noopener noreferrer">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.49 2 2 6.48 2 12.018c0 1.954.558 3.844 1.617 5.46L2 22l4.71-1.543a9.99 9.99 0 0 0 5.321 1.561h.004c5.54 0 10.03-4.48 10.03-10.018A10.02 10.02 0 0 0 12.031 2zm0 18.36a8.33 8.33 0 0 1-4.25-1.154l-.305-.181-3.158 1.034 1.054-3.078-.198-.315a8.31 8.31 0 0 1-1.274-4.649c0-4.6 3.75-8.35 8.36-8.35a8.3 8.3 0 0 1 5.91 2.45 8.28 8.28 0 0 1 2.45 5.9c0 4.61-3.75 8.36-8.36 8.36z"/></svg>
+      WhatsApp
+    </a>
+  </nav>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Interactive JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

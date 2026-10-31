@@ -1,77 +1,76 @@
+"use client";
+
 import React from "react";
-import { Sparkles, CheckCircle2, UserCheck, ShieldCheck, Heart, Clock } from "lucide-react";
-import { SectionHeading } from "@/components/common/SectionHeading";
+import { Scissors, User, Heart, Sparkles, MessageSquare, Eye } from "lucide-react";
 
 export const WhyChooseSparkSection: React.FC = () => {
   const pillars = [
     {
-      icon: <UserCheck className="w-5 h-5 text-spark-gold" />,
-      title: "Master Stylists & Colorists",
-      description:
-        "Every haircut, color blend, and facial is administered by trained specialists with deep knowledge in scalp care, texture mapping, and modern aesthetics.",
+      icon: <Scissors className="w-5 h-5 text-[#c9a45c]" />,
+      title: "Professional beauty & grooming",
+      description: "Trained professionals",
     },
     {
-      icon: <ShieldCheck className="w-5 h-5 text-spark-gold" />,
-      title: "100% Genuine Global Products",
-      description:
-        "We never dilute or substitute formulations. Exclusively genuine L'Oréal Professionnel Paris and salon-grade professional skincare brands.",
+      icon: <User className="w-5 h-5 text-[#c9a45c]" />,
+      title: "Personalised styling",
+      description: "Consultation first",
     },
     {
-      icon: <Heart className="w-5 h-5 text-spark-gold" />,
-      title: "Welcoming Unisex Ambience",
-      description:
-        "Designed to offer equal dignity and luxury to everyone, with private treatment zones, dedicated men's grooming stations, and relaxing lounge areas.",
+      icon: <Heart className="w-5 h-5 text-[#c9a45c]" />,
+      title: "Welcoming unisex environment",
+      description: "Comfortable for everyone",
     },
     {
-      icon: <Sparkles className="w-5 h-5 text-spark-gold" />,
-      title: "Clinical Hygiene Standards",
-      description:
-        "Medical-grade sanitizers, ultraviolet sterilization boxes, sealed single-use cape sets, and pristine chairs disinfected after every visitor.",
+      icon: <Sparkles className="w-5 h-5 text-[#c9a45c]" />,
+      title: "Modern salon atmosphere",
+      description: "Calm, contemporary interiors",
     },
     {
-      icon: <CheckCircle2 className="w-5 h-5 text-spark-gold" />,
-      title: "Transparent Consultations",
-      description:
-        "No hidden charges or pushed upsells. Clear price estimation and honest discussions regarding hair integrity prior to any service.",
+      icon: <MessageSquare className="w-5 h-5 text-[#c9a45c]" />,
+      title: "Customer-focused experience",
+      description: "Clear, attentive service",
     },
     {
-      icon: <Clock className="w-5 h-5 text-spark-gold" />,
-      title: "Respect for Your Time",
-      description:
-        "Optimized appointment scheduling and minimal wait times, allowing you to relax and enjoy your personal care ritual without rush.",
+      icon: <Eye className="w-5 h-5 text-[#c9a45c]" />,
+      title: "Attention to detail",
+      description: "From consult to finish",
     },
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-spark-bg relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="The SPARK Standard"
-          title="More Than a Salon. Your Personal Style Destination."
-          subtitle="We focus on what truly matters: exceptional craft, genuine hair and skin products, and an authentic welcoming atmosphere."
-        />
+    <section id="why" className="py-24 sm:py-32 bg-[#0d0d0d] text-white relative overflow-hidden">
+      {/* Background Ambient Glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80 pointer-events-none" />
 
-        {/* Pillars Grid */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div>
+          <p className="inline-flex items-center gap-2 text-[10.5px] font-semibold tracking-[0.3em] uppercase text-[#c9a45c]">
+            <span className="w-5 h-[1px] bg-current inline-block"></span>
+            WHY CHOOSE SPARK
+          </p>
+
+          <h2 className="mt-3 font-serif text-3xl sm:text-5xl font-normal leading-[1.15]">
+            More Than a Salon.<br />
+            Your Personal <em className="italic text-[#c9a45c]">Style Destination.</em>
+          </h2>
+        </div>
+
+        {/* 6 Feature Badges matching Screenshot 3 */}
+        <div className="mt-14 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8">
           {pillars.map((item, idx) => (
-            <div
-              key={idx}
-              className="p-8 bg-neutral-900/40 border border-white/5 hover:border-spark-gold/30 transition-all duration-300 relative group"
-            >
-              {/* Gold Top Accent Line on Hover */}
-              <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-spark-gold opacity-0 group-hover:opacity-100 transition-opacity" />
-
-              <div className="w-12 h-12 bg-spark-gold/10 border border-spark-gold/20 flex items-center justify-center mb-6">
+            <div key={idx} className="flex flex-col text-left group">
+              {/* Gold Outlined Square Icon Box */}
+              <div className="w-13 h-13 w-[52px] h-[52px] rounded-xl border border-[#c9a45c]/40 bg-[#c9a45c]/[0.08] flex items-center justify-center mb-4 group-hover:border-[#c9a45c] transition-colors">
                 {item.icon}
               </div>
 
-              <h3 className="font-serif text-xl text-white font-medium mb-3">
+              <b className="font-sans text-sm font-semibold text-white leading-snug">
                 {item.title}
-              </h3>
+              </b>
 
-              <p className="text-xs sm:text-sm text-neutral-400 font-sans leading-relaxed">
+              <span className="text-xs text-white/55 font-sans leading-relaxed mt-1">
                 {item.description}
-              </p>
+              </span>
             </div>
           ))}
         </div>

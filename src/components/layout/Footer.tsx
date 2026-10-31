@@ -42,38 +42,38 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs tracking-wider">
               <li>
-                <Link href="#home" className="hover:text-spark-gold transition-colors">
+                <Link href="/" className="hover:text-spark-gold transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="hover:text-spark-gold transition-colors">
-                  About SPARK
+                <Link href="/about" className="hover:text-spark-gold transition-colors">
+                  About &amp; Story
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  Our Services
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  Services Menu
                 </Link>
               </li>
               <li>
-                <Link href="#experience" className="hover:text-spark-gold transition-colors">
-                  Salon Ambience
+                <Link href="/space" className="hover:text-spark-gold transition-colors">
+                  Our Space &amp; Tour
                 </Link>
               </li>
               <li>
-                <Link href="#gallery" className="hover:text-spark-gold transition-colors">
-                  Video Gallery
+                <Link href="/offers" className="hover:text-spark-gold transition-colors">
+                  Offers &amp; Packages
                 </Link>
               </li>
               <li>
-                <Link href="#offers" className="hover:text-spark-gold transition-colors">
-                  Offers & Combos
-                </Link>
-              </li>
-              <li>
-                <Link href="#booking" className="hover:text-spark-gold transition-colors">
+                <Link href="/book" className="hover:text-spark-gold transition-colors">
                   Book Appointment
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-spark-gold transition-colors">
+                  Contact &amp; Hours
                 </Link>
               </li>
             </ul>
@@ -86,38 +86,38 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2.5 text-xs tracking-wider">
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  Designer Haircuts & Styling
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  Designer Haircuts &amp; Styling
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  Balayage & Global Hair Colour
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  Balayage &amp; Global Hair Colour
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
                   L&apos;Oréal Deep Nourishing Hair Spa
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  Hydrating Glow Facials & Cleanups
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  Hydrating Glow Facials &amp; Cleanups
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  Men&apos;s Beard Architecture & Shaves
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  Men&apos;s Beard Architecture &amp; Shaves
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  HD Bridal & Party Makeup
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  HD Bridal &amp; Party Makeup
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="hover:text-spark-gold transition-colors">
-                  Gel Nail Extensions & Artistry
+                <Link href="/services" className="hover:text-spark-gold transition-colors">
+                  Gel Nail Extensions &amp; Artistry
                 </Link>
               </li>
             </ul>

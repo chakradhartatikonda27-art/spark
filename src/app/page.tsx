@@ -5,6 +5,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { FounderSection } from "@/components/sections/FounderSection";
+import { OurSpaceSection } from "@/components/sections/OurSpaceSection";
 import { StyleConciergeSection } from "@/components/sections/StyleConciergeSection";
 import { TransformationSlider } from "@/components/sections/TransformationSlider";
 import { SignatureExperienceSection } from "@/components/sections/SignatureExperienceSection";
@@ -69,11 +71,17 @@ export default function HomePage() {
       {/* 04: Signature Services Discovery */}
       <ServicesSection onSelectService={handleSelectService} />
 
+      {/* 03: The Vision Behind SPARK (Founder Story) */}
+      <FounderSection />
+
       {/* NEW: Interactive Style & Haircare Concierge Quiz */}
       <StyleConciergeSection onSelectRecommendation={handleSelectService} />
 
       {/* NEW: Draggable Before & After Transformation Slider */}
       <TransformationSlider onSelectService={handleSelectService} />
+
+      {/* 06: A Glimpse of Our Space */}
+      <OurSpaceSection onOpenVideo={handleOpenVideo} />
 
       {/* 05: Signature Salon Experience (Real Salon Video Tour) */}
       <SignatureExperienceSection onOpenVideo={handleOpenVideo} />

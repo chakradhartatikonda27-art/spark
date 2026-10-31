@@ -55,6 +55,10 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/images/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -66,7 +70,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: siteConfig.name,
+    logo: "https://sparksalon.in/images/spark-logo.png",
     image: [
+      "https://sparksalon.in/images/spark-logo.png",
       "https://sparksalon.in/images/spark-hero-billboard.jpg",
       "https://sparksalon.in/images/posters/spark-exterior-night-poster.png",
     ],
