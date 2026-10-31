@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Play, X } from "lucide-react";
 
 interface SpaceCardItem {
@@ -107,6 +108,17 @@ export const OurSpaceSection: React.FC<{
               </div>
             </button>
           ))}
+        </div>
+
+        {/* Multi-Page Space Tour Link */}
+        <div className="mt-10 text-center">
+          <Link
+            href="/space"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-[#c9a45c] hover:text-white transition-colors"
+          >
+            <span>Explore Full Salon Architecture &amp; Virtual Tour</span>
+            <span className="text-sm">→</span>
+          </Link>
         </div>
       </div>
 

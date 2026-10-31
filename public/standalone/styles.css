@@ -533,8 +533,67 @@ h1, h2, h3, h4, h5 {
   color: var(--gold);
 }
 
-.links a:hover::after {
+.links a:hover::after,
+.links a.active::after,
+.links a[aria-current="page"]::after {
   width: 100%;
+}
+
+.links a.active,
+.links a[aria-current="page"] {
+  opacity: 1;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Subpage Editorial Banner */
+.page-banner {
+  padding: 140px 0 70px;
+  background: radial-gradient(circle at 50% 20%, rgba(201, 164, 92, 0.12), transparent 70%), #0d0d0d;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.page-banner .wrap {
+  position: relative;
+  z-index: 2;
+}
+.page-banner .h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 14px;
+}
+.page-banner .h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.page-banner .desc {
+  max-width: 38rem;
+  margin: 16px auto 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15.5px;
+  line-height: 1.6;
+}
+.breadcrumbs {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.5);
+}
+.breadcrumbs a:hover {
+  color: var(--gold);
+}
+.breadcrumbs span.current {
+  color: var(--gold);
 }
 
 .nav-cta {

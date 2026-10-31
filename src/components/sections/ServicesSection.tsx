@@ -142,14 +142,24 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             </p>
           </div>
 
-          <Button
-            variant="outline"
-            size="sm"
-            href="#booking"
-            className="flex-shrink-0"
-          >
-            Consult Our Stylist
-          </Button>
+          <div className="flex flex-wrap gap-3">
+            <Button
+              variant="outline"
+              size="sm"
+              href="/services"
+              className="flex-shrink-0"
+            >
+              Full Menu &amp; Pricing
+            </Button>
+            <Button
+              variant="primary"
+              size="sm"
+              href="/book"
+              className="flex-shrink-0"
+            >
+              Book Service
+            </Button>
+          </div>
         </div>
       </div>
     </section>

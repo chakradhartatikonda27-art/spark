@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { User } from "lucide-react";
 
 export const FounderSection: React.FC = () => {
@@ -46,13 +47,23 @@ export const FounderSection: React.FC = () => {
               Details to be provided by the salon.
             </p>
 
-            <div className="mt-8">
-              <b className="block font-serif text-2xl font-normal text-[#1d1d1d]">
-                Srinivas Uppala
-              </b>
-              <small className="block font-sans text-xs font-semibold tracking-[0.24em] uppercase text-[#9a7634] mt-1">
-                FOUNDER
-              </small>
+            <div className="mt-8 flex items-center justify-between flex-wrap gap-4 pt-4 border-t border-black/10">
+              <div>
+                <b className="block font-serif text-2xl font-normal text-[#1d1d1d]">
+                  Srinivas Uppala
+                </b>
+                <small className="block font-sans text-xs font-semibold tracking-[0.24em] uppercase text-[#9a7634] mt-1">
+                  FOUNDER
+                </small>
+              </div>
+
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-[#9a7634] hover:text-[#1d1d1d] transition-colors"
+              >
+                <span>Read Full Story &amp; Philosophy</span>
+                <span>→</span>
+              </Link>
             </div>
           </div>
         </div>

@@ -291,10 +291,13 @@
       const progress = docHeight > 0 ? scrollY / docHeight : 0;
 
       // Header solid state
-      if (scrollY > 50) {
-        nav.classList.add("solid");
-      } else {
-        nav.classList.remove("solid");
+      if (nav) {
+        const isSubpage = !!document.querySelector(".page-banner");
+        if (scrollY > 50 || isSubpage) {
+          nav.classList.add("solid");
+        } else {
+          nav.classList.remove("solid");
+        }
       }
 
       // Top progress bar
@@ -735,6 +738,20 @@
       dateInput.min = todayISO;
       dateInput.value = todayISO;
     }
+
+    // Auto-read URL params (e.g. ?service=Dimensional%20French%20Balayage)
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const srvParam = params.get("service") || params.get("package");
+      const noteParam = params.get("notes");
+      if (srvParam && bookingServiceSelect) {
+        setBookingService(srvParam);
+      }
+      if (noteParam) {
+        const notesInput = document.getElementById("b-notes");
+        if (notesInput) notesInput.value = noteParam;
+      }
+    } catch (_) {}
 
     bookingForm.addEventListener("submit", (e) => {
       e.preventDefault();

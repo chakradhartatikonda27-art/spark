@@ -103,6 +103,18 @@ export const OffersSection: React.FC<OffersSectionProps> = ({ onSelectPackage })
             </div>
           ))}
         </div>
+
+        {/* Multi-Page Link to Offers */}
+        <div className="mt-12 text-center">
+          <Button
+            variant="outline"
+            size="md"
+            href="/offers"
+            className="mx-auto"
+          >
+            View All Seasonal Packages &amp; VIP Memberships →
+          </Button>
+        </div>
       </div>
     </section>
   );

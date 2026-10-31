@@ -105,7 +105,7 @@ export const HeroSection: React.FC = () => {
           <Button
             variant="primary"
             size="lg"
-            href="#booking"
+            href="/book"
             leftIcon={<Calendar className="w-4 h-4" />}
             className="w-full sm:w-auto"
           >
@@ -115,7 +115,7 @@ export const HeroSection: React.FC = () => {
           <Button
             variant="secondary"
             size="lg"
-            href="#services"
+            href="/services"
             className="w-full sm:w-auto"
           >
             Explore Our Services

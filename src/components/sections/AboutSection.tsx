@@ -116,10 +116,10 @@ export const AboutSection: React.FC = () => {
 
             {/* Action Buttons */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
-              <Button variant="primary" size="md" href="#experience">
-                Discover SPARK
+              <Button variant="primary" size="md" href="/about">
+                Discover Our Story &amp; Founder
               </Button>
-              <Button variant="outline" size="md" href="#booking">
+              <Button variant="outline" size="md" href="/book">
                 Reserve Your Chair
               </Button>
             </div>
