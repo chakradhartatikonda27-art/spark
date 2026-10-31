@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Button } from "@/components/common/Button";
+import { LiveStatusBadge } from "@/components/common/LiveStatusBadge";
 import { siteConfig } from "@/config/siteConfig";
 
 export const ContactSection: React.FC = () => {
@@ -49,9 +50,12 @@ export const ContactSection: React.FC = () => {
               </div>
 
               <div>
-                <span className="text-[10px] tracking-[0.24em] uppercase text-spark-gold font-sans font-semibold block mb-2">
-                  Salon Timings
-                </span>
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-[10px] tracking-[0.24em] uppercase text-spark-gold font-sans font-semibold block">
+                    Salon Timings
+                  </span>
+                  <LiveStatusBadge showFullText={true} />
+                </div>
                 <div className="flex items-start space-x-3 text-white">
                   <Clock className="w-5 h-5 text-spark-gold flex-shrink-0 mt-1" />
                   <div className="text-sm font-sans space-y-1 text-neutral-300">

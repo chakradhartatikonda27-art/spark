@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Menu, X, Phone, Calendar, Clock, MapPin } from "lucide-react";
 import { Logo } from "@/components/common/Logo";
 import { Button } from "@/components/common/Button";
+import { LiveStatusBadge } from "@/components/common/LiveStatusBadge";
 import { siteConfig } from "@/config/siteConfig";
 
 export const Navbar: React.FC = () => {
@@ -97,6 +98,8 @@ export const Navbar: React.FC = () => {
 
             {/* Desktop Action Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
+              <LiveStatusBadge />
+
               <a
                 href={`tel:${siteConfig.contact.phoneTel}`}
                 className="flex items-center space-x-2 text-xs text-neutral-300 hover:text-spark-gold transition-colors font-sans tracking-wider"
@@ -176,6 +179,10 @@ export const Navbar: React.FC = () => {
               >
                 <X className="w-5 h-5" />
               </button>
+            </div>
+
+            <div className="py-3 border-b border-white/5">
+              <LiveStatusBadge showFullText={true} />
             </div>
 
             {/* Links */}

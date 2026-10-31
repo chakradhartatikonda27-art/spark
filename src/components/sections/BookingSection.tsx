@@ -21,11 +21,13 @@ import { siteConfig } from "@/config/siteConfig";
 interface BookingSectionProps {
   initialService?: string;
   initialCategory?: string;
+  initialNotes?: string;
 }
 
 export const BookingSection: React.FC<BookingSectionProps> = ({
   initialService = "",
   initialCategory = "hair",
+  initialNotes = "",
 }) => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -35,7 +37,7 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
     stylist: "Any Available Master Stylist",
     appointmentDate: "",
     timeSlot: "11:00 AM - 12:00 PM",
-    notes: "",
+    notes: initialNotes,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,6 +56,12 @@ export const BookingSection: React.FC<BookingSectionProps> = ({
       setFormData((prev) => ({ ...prev, service: initialService }));
     }
   }, [initialService]);
+
+  useEffect(() => {
+    if (initialNotes) {
+      setFormData((prev) => ({ ...prev, notes: initialNotes }));
+    }
+  }, [initialNotes]);
 
   // Set min-date to today
   const today = new Date().toISOString().split("T")[0];
