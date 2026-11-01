@@ -114,6 +114,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="space.html">Our Space</a>
         <a href="offers.html" class="active" aria-current="page">Offers</a>
         <a href="contact.html">Contact</a>
@@ -141,6 +142,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="space.html">Our Space</a>
       <a href="offers.html" class="active">Offers</a>
       <a href="contact.html">Contact</a>
@@ -275,6 +277,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About &amp; Story</a></li>
             <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
             <li><a href="space.html">Our Space</a></li>
             <li><a href="offers.html">Special Offers</a></li>
             <li><a href="book.html">Book Appointment</a></li>
@@ -336,17 +339,22 @@
   <!-- Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Lightbox Modal -->
-  <dialog class="lb" id="lightbox" aria-label="Media preview">
-    <div class="lb-cnt" id="lb-cnt">
-      <figure id="lb-fig"></figure>
-      <div class="lb-txt" id="lb-txt">
-        <h4 id="lb-cap"></h4>
-        <p id="lb-cat"></p>
-        <p id="lb-desc"></p>
-      </div>
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
     </div>
-    <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
   </dialog>
 
   <!-- External Application Logic -->

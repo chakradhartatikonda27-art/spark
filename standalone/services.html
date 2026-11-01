@@ -114,6 +114,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html" class="active" aria-current="page">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="space.html">Our Space</a>
         <a href="offers.html">Offers</a>
         <a href="contact.html">Contact</a>
@@ -141,6 +142,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html" class="active">Services</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="space.html">Our Space</a>
       <a href="offers.html">Offers</a>
       <a href="contact.html">Contact</a>
@@ -167,24 +169,39 @@
     </section>
 
 
-    <!-- Category Filterable Menu -->
-    <section id="services" class="sec dk2">
+    <!-- 01: Signature Services Grid -->
+    <section id="about" class="sec" style="padding-bottom: 40px;">
       <div class="wrap">
-        <div class="sh rv">
-          <div>
-            <span class="tag">Couture Services</span>
-            <h2 class="h2">Curated <em>Disciplines</em></h2>
-            <p class="sub">From precision scissor architecture to dermatological facials and bespoke bridal glam.</p>
+        <div class="sh">
+          <div class="rv">
+            <p class="tag">Signature Services</p>
+            <h2 class="h2">Complete Beauty &amp; Grooming<br>for <em>Everyone</em></h2>
+            <p class="sub">
+              From dimensional French balayage to Korean glass-skin medi-facials, our master stylists tailor every service to your individual aesthetic.
+            </p>
           </div>
-          <div class="tabs" id="serv-tabs" role="tablist" aria-label="Service disciplines">
-            <button class="tab active" data-cat="all" role="tab" aria-selected="true">All Services</button>
-            <button class="tab" data-cat="hair" role="tab" aria-selected="false">Hair</button>
-            <button class="tab" data-cat="skin" role="tab" aria-selected="false">Skin &amp; Spa</button>
-            <button class="tab" data-cat="nails" role="tab" aria-selected="false">Nails</button>
-            <button class="tab" data-cat="men" role="tab" aria-selected="false">Men's</button>
+          <a href="book.html" class="btn btn-ol rv">Book Any Service</a>
+        </div>
+        <div class="cards" id="cards"></div>
+      </div>
+    </section>
+
+    <!-- 02: Service Menu & Categories -->
+    <section id="services" class="sec dk2" style="padding-top:60px">
+      <div class="wrap">
+        <div class="sh" style="margin-bottom:0">
+          <div class="rv">
+            <p class="tag">Curated Price Menu</p>
+            <h2 class="h2">Discover Your <em>Signature</em> Style</h2>
+            <p class="sub">Select a category below to explore transparent pricing and service breakdowns.</p>
           </div>
         </div>
-        <div class="cards" id="serv-cards"></div>
+
+        <div class="tabs" id="tabs" role="tablist" aria-label="Salon Service Categories"></div>
+        <div class="menu-wrap tabbed" id="menu-wrap"></div>
+        <p class="note">
+          ✦ Note: Prices are transparent baseline rates. Final pricing depends on hair length, density, and customized formulations confirmed during consultation.
+        </p>
       </div>
     </section>
 
@@ -197,33 +214,43 @@
             <h2 class="h2">Before &amp; <em>After</em></h2>
             <p class="sub">Slide to inspect authentic guest hair color corrections, balayage, and texturizing transformations.</p>
           </div>
+          <a href="book.html" class="btn btn-gold rv">Start Your Transformation</a>
         </div>
-        <div class="ba-grid">
+        <div class="wk">
+          <!-- Slide 1: Balayage -->
           <div class="ba rv" data-d="1">
-            <div class="ba-cnt">
-              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="After French Balayage" />
-              <div class="ba-before"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80" alt="Before Balayage" /></div>
-              <input type="range" min="0" max="100" value="50" aria-label="Before and after balayage slider" />
-              <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn">⇄</div></div>
-              <span class="ba-tag ba-tag-l">Before</span><span class="ba-tag ba-tag-r">After</span>
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Before Hair Transformation" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="After French Balayage" />
             </div>
-            <div class="ba-meta">
-              <h4>Dimensional French Balayage</h4>
-              <p>Corrective root melt + ash beige tone softening harsh banding.</p>
-            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for French Balayage" />
           </div>
+
+          <!-- Slide 2: Glass Skin Facial -->
           <div class="ba rv" data-d="2">
-            <div class="ba-cnt">
-              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=700&q=80" alt="After Botoplex Hair Collagen" />
-              <div class="ba-before"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=700&q=80" alt="Before Botoplex" /></div>
-              <input type="range" min="0" max="100" value="50" aria-label="Before and after Botoplex treatment slider" />
-              <div class="ba-handle"><div class="ba-line"></div><div class="ba-btn">⇄</div></div>
-              <span class="ba-tag ba-tag-l">Before</span><span class="ba-tag ba-tag-r">After</span>
+            <img src="https://images.unsplash.com/photo-1512290900672-1f5076eb43df?auto=format&fit=crop&w=800&q=80" alt="Before Skin Therapy" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="After Glass Skin Hydra Facial" />
             </div>
-            <div class="ba-meta">
-              <h4>Botoplex Collagen Therapy</h4>
-              <p>Restored hydration and sealed cuticle on chemically sensitized hair.</p>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for Glass Glow Facial" />
+          </div>
+
+          <!-- Slide 3: Beard & Fade -->
+          <div class="ba rv" data-d="3">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Before Grooming" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="After Precision Taper & Beard Sculpt" />
             </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for Beard Sculpting" />
           </div>
         </div>
       </div>
@@ -259,6 +286,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About &amp; Story</a></li>
             <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
             <li><a href="space.html">Our Space</a></li>
             <li><a href="offers.html">Special Offers</a></li>
             <li><a href="book.html">Book Appointment</a></li>
@@ -320,17 +348,22 @@
   <!-- Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Lightbox Modal -->
-  <dialog class="lb" id="lightbox" aria-label="Media preview">
-    <div class="lb-cnt" id="lb-cnt">
-      <figure id="lb-fig"></figure>
-      <div class="lb-txt" id="lb-txt">
-        <h4 id="lb-cap"></h4>
-        <p id="lb-cat"></p>
-        <p id="lb-desc"></p>
-      </div>
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
     </div>
-    <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
   </dialog>
 
   <!-- External Application Logic -->

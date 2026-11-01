@@ -114,6 +114,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="space.html" class="active" aria-current="page">Our Space</a>
         <a href="offers.html">Offers</a>
         <a href="contact.html">Contact</a>
@@ -141,6 +142,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="space.html" class="active">Our Space</a>
       <a href="offers.html">Offers</a>
       <a href="contact.html">Contact</a>
@@ -178,40 +180,39 @@
           </div>
         </div>
         <div class="space-grid">
+          <!-- Card 1: Backlit Logo Sign -->
           <div class="space-card rv" data-d="1" data-video="videos/spark-billboard-reveal.mp4" data-title="SPARK Signature 3D Emblem">
-            <div class="space-poster">
-              <img src="images/posters/spark-billboard-reveal-poster.png" alt="SPARK Signature 3D Emblem Interior" />
-              <div class="play-badge"><svg><use href="#i-play"/></svg></div>
-            </div>
-            <div class="space-info"><h4>SPARK Signature 3D Emblem</h4><p>Main Boulevard Entrance</p></div>
+            <img src="images/posters/spark-billboard-reveal-poster.png" alt="SPARK Signature Emblem Sign" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Signature Emblem</div>
           </div>
+
+          <!-- Card 2: Reception Desk -->
           <div class="space-card rv" data-d="2" data-video="videos/spark-reception-gold.mp4" data-title="Champagne Gold Reception Desk">
-            <div class="space-poster">
-              <img src="images/posters/spark-reception-gold-poster.png" alt="Champagne Gold Reception Desk" />
-              <div class="play-badge"><svg><use href="#i-play"/></svg></div>
-            </div>
-            <div class="space-info"><h4>Champagne Gold Reception Desk</h4><p>Welcome Concierge</p></div>
+            <img src="images/posters/spark-reception-gold-poster.png" alt="SPARK Reception Desk" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Reception Lounge</div>
           </div>
+
+          <!-- Card 3: Sculptural Organic Tree Lounge -->
           <div class="space-card rv" data-d="3" data-video="videos/spark-lounge-interior.mp4" data-title="Sculptural Organic Tree Lounge">
-            <div class="space-poster">
-              <img src="images/posters/spark-lounge-interior-poster.png" alt="Sculptural Organic Tree Lounge" />
-              <div class="play-badge"><svg><use href="#i-play"/></svg></div>
-            </div>
-            <div class="space-info"><h4>Sculptural Organic Tree Lounge</h4><p>Client Waiting Sanctuary</p></div>
+            <img src="images/posters/spark-lounge-interior-poster.png" alt="SPARK Sanctuary Tree Lounge" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Organic Tree Sanctuary</div>
           </div>
-          <div class="space-card rv" data-d="1" data-video="videos/spark-entrance-walkthrough.mp4" data-title="Tranquil Sanctuary Alcove">
-            <div class="space-poster">
-              <img src="images/posters/spark-entrance-walkthrough-poster.png" alt="Tranquil Sanctuary Alcove" />
-              <div class="play-badge"><svg><use href="#i-play"/></svg></div>
-            </div>
-            <div class="space-info"><h4>Tranquil Sanctuary Alcove</h4><p>Private Hair Treatment Bays</p></div>
+
+          <!-- Card 4: Entrance Alcove Walkthrough -->
+          <div class="space-card rv" data-d="4" data-video="videos/spark-entrance-walkthrough.mp4" data-title="Tranquil Sanctuary Alcove">
+            <img src="images/posters/spark-entrance-walkthrough-poster.png" alt="SPARK Corridor Walkthrough" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Sanctuary Walkthrough</div>
           </div>
-          <div class="space-card rv" data-d="2" data-video="videos/spark-styling-consultation.mp4" data-title="Illuminated Treatment &amp; Styling Bar">
-            <div class="space-poster">
-              <img src="images/posters/spark-styling-consultation-poster.png" alt="Illuminated Treatment & Styling Bar" />
-              <div class="play-badge"><svg><use href="#i-play"/></svg></div>
-            </div>
-            <div class="space-info"><h4>Illuminated Treatment &amp; Styling Bar</h4><p>Couture Styling Floor</p></div>
+
+          <!-- Card 5: Styling Bar -->
+          <div class="space-card rv" data-d="5" data-video="videos/spark-styling-consultation.mp4" data-title="Illuminated Treatment &amp; Styling Bar">
+            <img src="images/posters/spark-styling-consultation-poster.png" alt="SPARK Styling Floor" loading="lazy" />
+            <div class="ply"><svg><use href="#i-play"/></svg></div>
+            <div class="caption">Styling Consultation Bar</div>
           </div>
         </div>
       </div>
@@ -227,7 +228,7 @@
             <p class="sub">Click any tile to expand high-resolution interior and editorial styling captures.</p>
           </div>
         </div>
-        <div class="grid" id="gal-grid"></div>
+        <div class="gal" id="gal"></div>
       </div>
     </section>
 
@@ -262,6 +263,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About &amp; Story</a></li>
             <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
             <li><a href="space.html">Our Space</a></li>
             <li><a href="offers.html">Special Offers</a></li>
             <li><a href="book.html">Book Appointment</a></li>
@@ -323,17 +325,22 @@
   <!-- Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Lightbox Modal -->
-  <dialog class="lb" id="lightbox" aria-label="Media preview">
-    <div class="lb-cnt" id="lb-cnt">
-      <figure id="lb-fig"></figure>
-      <div class="lb-txt" id="lb-txt">
-        <h4 id="lb-cap"></h4>
-        <p id="lb-cat"></p>
-        <p id="lb-desc"></p>
-      </div>
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
     </div>
-    <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
   </dialog>
 
   <!-- External Application Logic -->

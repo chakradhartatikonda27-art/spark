@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Client Portfolio & Transformations | SPARK Salon Visakhapatnam</title>
+  <meta name="description" content="Explore real client transformations, balayage hair color, skin treatments, men's grooming, and bridal looks crafted at SPARK Unisex Salon Visakhapatnam." />
+  <meta name="theme-color" content="#0d0d0d" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/spark-mark.png" />
+  <link rel="apple-touch-icon" href="images/spark-mark.png" />
+
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Global SVG Definitions -->
+  <svg width="0" height="0" style="position:absolute; display:none" aria-hidden="true">
+    <defs>
+      <linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#f3dba3" />
+        <stop offset="50%" stop-color="#c9a45c" />
+        <stop offset="100%" stop-color="#9a7634" />
+      </linearGradient>
+
+      <symbol id="flame" viewBox="0 0 64 84">
+        <g fill="url(#gold-grad)">
+          <path d="M12 26C-3 42 -1 64 14 74C21 79 27 78 31 74C23 72 15 70 10 60C5 50 8 38 12 26Z"/>
+          <path d="M24 14C9 30 11 52 26 62C33 67 39 66 43 62C35 60 27 58 22 48C17 38 20 26 24 14Z"/>
+          <path d="M36 26C21 42 23 64 38 74C45 79 51 78 55 74C47 72 39 70 34 60C29 50 32 38 36 26Z"/>
+          <path d="M26 4l1.4 4.1L31.5 9.5l-4.1 1.4L26 15l-1.4-4.1L20.5 9.5l4.1-1.4z" transform="translate(7 -2)"/>
+        </g>
+      </symbol>
+
+      <symbol id="arr" viewBox="0 0 16 16">
+        <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-scissors" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/>
+          <path d="M8.5 7.5L20 18M8.5 16.5L20 6"/>
+        </g>
+      </symbol>
+
+      <symbol id="i-sparkle" viewBox="0 0 24 24">
+        <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>
+        </g>
+      </symbol>
+
+      <symbol id="i-crown" viewBox="0 0 24 24">
+        <path d="M3 18l-1-11 6 5 4-8 4 8 6-5-1 11H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="M20 6L9 17l-5-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Top Progress Bar -->
+  <div class="pg" id="pg"></div>
+
+  <!-- Header & Navigation -->
+  <header class="nav solid" id="nav">
+    <div class="wrap">
+      <a href="index.html" class="logo" aria-label="SPARK — home">
+        <img src="images/spark-logo.png" alt="SPARK — Hair · Skin · Nails · Makeup" />
+      </a>
+
+      <nav class="links" aria-label="Primary Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" class="active" aria-current="page">Portfolio</a>
+        <a href="space.html">Our Space</a>
+        <a href="offers.html">Offers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div style="display:flex; align-items:center; gap: 10px;">
+        <a href="book.html" class="btn btn-gold nav-cta">Book Appointment</a>
+        <button
+          class="burger"
+          id="burger"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <span><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="menu" id="menu" aria-label="Mobile Navigation">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="space.html">Our Space</a>
+      <a href="offers.html">Offers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="ctas">
+      <a href="book.html" class="btn btn-gold">Book Appointment</a>
+      <a href="tel:+919390560625" class="btn btn-ring">Call Salon Concierge</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- Page Editorial Banner -->
+    <section class="page-banner">
+      <div class="wrap">
+        <span class="tag">Client Portfolio</span>
+        <h1 class="h1">Real Clients. <em>Signature Craft.</em></h1>
+        <p class="desc">
+          Browse authentic before-and-after transformations, dimensional couture hair color, glass skin rituals, and executive grooming crafted inside SPARK.
+        </p>
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span class="current">Client Portfolio</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transformations: Interactive Sliders -->
+    <section id="transformations" class="sec dk">
+      <div class="wrap">
+        <div class="sh rv">
+          <div>
+            <span class="tag">Zero Filter Evidence</span>
+            <h2 class="h2">Before &amp; <em>After</em> Sliders</h2>
+            <p class="sub">Drag the divider left or right to inspect real client results achieved with certified techniques.</p>
+          </div>
+          <a href="book.html" class="btn btn-gold rv">Claim Your Transformation</a>
+        </div>
+
+        <div class="wk">
+          <!-- Slide 1: Balayage -->
+          <div class="ba rv" data-d="1">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80" alt="Before Hair Transformation" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="After French Balayage" />
+            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for French Balayage" />
+          </div>
+
+          <!-- Slide 2: Glass Skin Facial -->
+          <div class="ba rv" data-d="2">
+            <img src="https://images.unsplash.com/photo-1512290900672-1f5076eb43df?auto=format&fit=crop&w=800&q=80" alt="Before Skin Therapy" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="After Glass Skin Hydra Facial" />
+            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for Glass Glow Facial" />
+          </div>
+
+          <!-- Slide 3: Beard & Fade -->
+          <div class="ba rv" data-d="3">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Before Grooming" />
+            <div class="af">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="After Precision Taper & Beard Sculpt" />
+            </div>
+            <div class="hd"></div>
+            <span class="lb1">Before</span>
+            <span class="lb2">After</span>
+            <input type="range" min="0" max="100" value="50" aria-label="Comparison slider for Beard Sculpting" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Portfolio Showcase -->
+    <section class="sec dk2" id="client-gallery">
+      <div class="wrap">
+        <div class="sh rv">
+          <div>
+            <span class="tag">Curated Portfolio</span>
+            <h2 class="h2">Guest <em>Lookbook</em></h2>
+            <p class="sub">Click any transformation to expand in high-resolution detail. Filter by discipline below.</p>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="port-filter rv" role="tablist" aria-label="Portfolio filters">
+          <button type="button" class="port-btn active" data-filter="all">All Disciplines</button>
+          <button type="button" class="port-btn" data-filter="hair">Hair Color &amp; Balayage</button>
+          <button type="button" class="port-btn" data-filter="texture">Texture &amp; Treatments</button>
+          <button type="button" class="port-btn" data-filter="skin">Skin &amp; Medi-Facials</button>
+          <button type="button" class="port-btn" data-filter="men">Men's Grooming</button>
+          <button type="button" class="port-btn" data-filter="bridal">Bridal &amp; Glamour</button>
+        </div>
+
+        <!-- Portfolio Cards Grid -->
+        <div class="port-grid">
+          <!-- Item 1: French Balayage -->
+          <article class="port-card rv" data-cat="hair" data-d="1">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="French Balayage & Root Melt Transformation" loading="lazy" />
+              <span class="port-tag">Hair Color</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Dimensional French Balayage</h4>
+              <p>Melted caramel root with cool ash-beige dimensional ribbons. Hand-painted using L'Oréal Metal Detox.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Lead Colorist: Priya Sharma</span>
+                <span class="port-client">Guest: Sneha K.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Botoplex Collagen -->
+          <article class="port-card rv" data-cat="texture" data-d="2">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Botoplex Collagen Hair Therapy" loading="lazy" />
+              <span class="port-tag">Restoration</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Botoplex Deep Collagen Sealer</h4>
+              <p>High-gloss cuticle restructuring on bleached hair. Zero frizz, glass reflection, 4-month resilience.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Stylist: Suresh Uppala</span>
+                <span class="port-client">Guest: Meghana C.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Glass Skin Facial -->
+          <article class="port-card rv" data-cat="skin" data-d="3">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Glass Glow Medi-Facial" loading="lazy" />
+              <span class="port-tag">Medi-Facial</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Korean Glass Skin Hydra-Facial</h4>
+              <p>Multi-step vortex dermal infusion with peptide hydration ampoules and botanical barrier restore.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Aesthetician: Ananya Reddy</span>
+                <span class="port-client">Guest: Radhika S.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Master Barber Fade -->
+          <article class="port-card rv" data-cat="men" data-d="1">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80" alt="Executive Taper Fade & Hot Towel Beard" loading="lazy" />
+              <span class="port-tag">Men's Grooming</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Architectural Fade &amp; Beard Press</h4>
+              <p>Skin-taper fade with razor-sharp cheek line symmetry and organic cedarwood hot-towel conditioning.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Barber Lead: Rahul Varma</span>
+                <span class="port-client">Guest: Vikram R.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Bridal Royale Glamour -->
+          <article class="port-card rv" data-cat="bridal" data-d="2">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=800&q=80" alt="HD Airbrush Bridal Glamour" loading="lazy" />
+              <span class="port-tag">Bridal Royale</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>HD Airbrush Bridal Radiance</h4>
+              <p>Waterproof airbrush base with bespoke floral bridal updo and architectural jasmine setting.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Bridal Director: Ananya Reddy</span>
+                <span class="port-client">Guest: Aishwarya N.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Precision Scissor Architecture -->
+          <article class="port-card rv" data-cat="hair" data-d="3">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Precision Layered Haircut" loading="lazy" />
+              <span class="port-tag">Precision Cut</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Weightless Butterfly Layers</h4>
+              <p>Ergonomic Japanese convex shears cut for natural movement, face framing, and effortless volume.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Artistic Lead: Suresh Uppala</span>
+                <span class="port-client">Guest: Tanvi P.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Russian Gel Nails -->
+          <article class="port-card rv" data-cat="skin" data-d="1">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Russian Gel Nail Art & Extensions" loading="lazy" />
+              <span class="port-tag">Nail Couture</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Russian Dry Manicure &amp; Chrome</h4>
+              <p>Precision e-file cuticle alignment with almond chrome extensions that remain immaculate for 4 weeks.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Nail Artist: Maya K.</span>
+                <span class="port-client">Guest: Kavya M.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Keratin Silk Discipline -->
+          <article class="port-card rv" data-cat="texture" data-d="2">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=800&q=80" alt="Keratin Silk Discipline" loading="lazy" />
+              <span class="port-tag">Smoothing</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Formaldehyde-Free Keratin Discipline</h4>
+              <p>Natural botanical keratin infusion reducing wave volume by 80% while retaining bounce and health.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Master Stylist: Suresh Uppala</span>
+                <span class="port-client">Guest: Pooja V.</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Gentleman's Charcoal Detox -->
+          <article class="port-card rv" data-cat="men" data-d="3">
+            <div class="port-img">
+              <img src="https://images.unsplash.com/photo-1517832606589-7629c339590a?auto=format&fit=crop&w=800&q=80" alt="Gentlemen's Charcoal Detox" loading="lazy" />
+              <span class="port-tag">Men's Spa</span>
+              <div class="port-zoom" aria-hidden="true"><svg width="14" height="14"><use href="#i-eye"/></svg></div>
+            </div>
+            <div class="port-meta">
+              <h4>Charcoal Deep Clarifying Facial</h4>
+              <p>Activated bamboo charcoal pore suction, anti-pollution exfoliation, and relaxing pressure-point scalp massage.</p>
+              <div class="port-foot">
+                <span class="port-stylist">Therapist: Rahul Varma</span>
+                <span class="port-client">Guest: Siddharth D.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials & Trust -->
+    <section class="sec dk" id="client-stories">
+      <div class="wrap">
+        <div class="sh rv">
+          <div>
+            <span class="tag">Client Endorsements</span>
+            <h2 class="h2">Words from Our <em>Patrons</em></h2>
+            <p class="sub">Over 1,200 verified five-star ratings across Visakhapatnam.</p>
+          </div>
+        </div>
+
+        <div class="rev-grid">
+          <div class="rev-card rv" data-d="1">
+            <div class="rev-stars">★★★★★</div>
+            <p>"The balayage work here is on another level. Priya studied my natural undertones and formulated an ash beige that grew out with zero harsh lines. The compliments haven't stopped!"</p>
+            <div class="rev-user">
+              <b>Sneha K.</b>
+              <small>French Balayage &amp; Cut</small>
+            </div>
+          </div>
+
+          <div class="rev-card rv" data-d="2">
+            <div class="rev-stars">★★★★★</div>
+            <p>"I had bleached my hair twice in Hyderabad and it felt like straw. Suresh Uppala recommended the Botoplex collagen regimen. Within 90 minutes my hair felt like silk again. Pure magic."</p>
+            <div class="rev-user">
+              <b>Meghana Chowdary</b>
+              <small>Botoplex Hair Restoration</small>
+            </div>
+          </div>
+
+          <div class="rev-card rv" data-d="3">
+            <div class="rev-stars">★★★★★</div>
+            <p>"Finally a salon that gives men’s grooming the couture attention it deserves. Rahul spends time analyzing your jawline and hairline before touching a clipper. Flawless fade every single time."</p>
+            <div class="rev-user">
+              <b>Vikram Rao</b>
+              <small>Executive Grooming Patron</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="sec" style="text-align: center; background: #fff;">
+      <div class="wrap">
+        <h2 class="h2">Inspired by These Transformations?</h2>
+        <p class="sub" style="margin: 14px auto 30px;">
+          Book your personalized 1-on-1 consultation with our master artists today.
+        </p>
+        <a href="book.html" class="btn btn-gold">Reserve Your Appointment</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Luxury Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="fg">
+        <div>
+          <a href="index.html" class="logo ft" aria-label="SPARK — home">
+            <img src="images/spark-logo.png" alt="SPARK — Hair · Skin · Nails · Makeup" />
+          </a>
+          <p class="intro">
+            Elevating everyday beauty and personal style through couture hair craftsmanship, advanced skin science, and uncompromised guest hospitality.
+          </p>
+        </div>
+
+        <div>
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Story</a></li>
+            <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
+            <li><a href="space.html">Our Space</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="book.html">Book Appointment</a></li>
+            <li><a href="contact.html">Contact &amp; Hours</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Treatments</h5>
+          <ul>
+            <li><a href="services.html">French Balayage</a></li>
+            <li><a href="services.html">Botoplex Collagen</a></li>
+            <li><a href="services.html">Keratin Discipline</a></li>
+            <li><a href="services.html">Glass Skin Facials</a></li>
+            <li><a href="services.html">Hot Towel Shave</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>Visit Sanctuary</h5>
+          <ul>
+            <li>Tue–Sun: 9:30 AM – 9 PM</li>
+            <li>Mon: 10:00 AM – 8 PM</li>
+            <li>Opposite City Centre, Visakhapatnam</li>
+            <li><a href="tel:+919390560625">+91 93905 60625</a></li>
+            <li><a href="https://wa.me/919390560625">WhatsApp Direct</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5>VIP Privileges</h5>
+          <p style="font-size: 13px; color: rgba(255,255,255,0.6); margin-bottom: 10px;">
+            Subscribe to receive priority booking alerts and private seasonal packages.
+          </p>
+          <form class="nl" id="nl-form">
+            <input type="email" placeholder="Your email address" required aria-label="Email for VIP newsletter" />
+            <button type="submit" aria-label="Subscribe to VIP newsletter">→</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="fb">
+        <div class="wrap">
+          <div>
+            © 2026 SPARK Beauty Salon. All rights reserved. Delivered with pride by Siyantech Global Innovations.
+          </div>
+          <div class="l">
+            <a href="index.html#home">Privacy Policy</a>
+            <a href="index.html#home">Terms of Service</a>
+            <a href="contact.html">Guest Safety</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Connect Button -->
+  <a
+    href="https://wa.me/919390560625"
+    class="wa"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat directly with SPARK Salon concierge on WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 2C6.49 2 2 6.48 2 12.018c0 1.954.558 3.844 1.617 5.46L2 22l4.71-1.543a9.99 9.99 0 0 0 5.321 1.561h.004c5.54 0 10.03-4.48 10.03-10.018A10.02 10.02 0 0 0 12.031 2zm0 18.36a8.33 8.33 0 0 1-4.25-1.154l-.305-.181-3.158 1.034 1.054-3.078-.198-.315a8.31 8.31 0 0 1-1.274-4.649c0-4.6 3.75-8.35 8.36-8.35a8.3 8.3 0 0 1 5.91 2.45 8.28 8.28 0 0 1 2.45 5.9c0 4.61-3.75 8.36-8.36 8.36zm4.58-6.24c-.25-.13-1.48-.73-1.71-.82-.23-.08-.39-.13-.56.13-.17.25-.65.82-.8 1-.15.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.02 2.6c.13.17 1.77 2.7 4.28 3.79.6.26 1.06.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.48-.61 1.69-1.2.21-.58.21-1.08.15-1.19-.06-.11-.23-.17-.48-.3z"/>
+    </svg>
+  </a>
+
+  <!-- Mobile Quick Action Sticky Bar -->
+  <nav class="sbar" id="sbar" aria-label="Mobile quick actions">
+    <a href="tel:+919390560625">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Salon
+    </a>
+    <a href="book.html" class="bk">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Book Appointment
+    </a>
+    <a href="https://wa.me/919390560625" target="_blank" rel="noopener noreferrer">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.49 2 2 6.48 2 12.018c0 1.954.558 3.844 1.617 5.46L2 22l4.71-1.543a9.99 9.99 0 0 0 5.321 1.561h.004c5.54 0 10.03-4.48 10.03-10.018A10.02 10.02 0 0 0 12.031 2zm0 18.36a8.33 8.33 0 0 1-4.25-1.154l-.305-.181-3.158 1.034 1.054-3.078-.198-.315a8.31 8.31 0 0 1-1.274-4.649c0-4.6 3.75-8.35 8.36-8.35a8.3 8.3 0 0 1 5.91 2.45 8.28 8.28 0 0 1 2.45 5.9c0 4.61-3.75 8.36-8.36 8.36z"/></svg>
+      WhatsApp
+    </a>
+  </nav>
+
+  <!-- Notification Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
+    </div>
+  </dialog>
+
+  <!-- External Application Logic -->
+  <script src="app.js" defer></script>
+</body>
+</html>

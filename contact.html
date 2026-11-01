@@ -114,6 +114,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="space.html">Our Space</a>
         <a href="offers.html">Offers</a>
         <a href="contact.html" class="active" aria-current="page">Contact</a>
@@ -141,6 +142,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="space.html">Our Space</a>
       <a href="offers.html">Offers</a>
       <a href="contact.html" class="active">Contact</a>
@@ -170,58 +172,60 @@
     <!-- Contact Info & Map Section -->
     <section id="contact" class="sec dk">
       <div class="wrap">
-        <div class="sh rv">
-          <div>
-            <span class="tag">Connect With Us</span>
-            <h2 class="h2">Visit Our <em>Sanctuary</em></h2>
-            <p class="sub">Located on the main commercial boulevard in Visakhapatnam with dedicated valet and reserved guest parking.</p>
+        <div class="cg">
+          <!-- Contact Details Column -->
+          <div class="rv">
+            <p class="tag">Visit Our Studio</p>
+            <h2 class="h2">Conveniently Located in <em>Visakhapatnam</em></h2>
+            <p class="sub">
+              Drop by for a consultation, book ahead, or reach out to our concierge for custom bridal packages.
+            </p>
+
+            <div class="rows">
+              <div class="r">
+                <span class="k">Address</span>
+                <span class="v">Main Commercial Boulevard, Opposite City Centre, 2nd Floor, Visakhapatnam, AP 530016</span>
+              </div>
+              <div class="r">
+                <span class="k">Phone</span>
+                <span class="v"><a href="tel:+919390560625">+91 93905 60625</a></span>
+              </div>
+              <div class="r">
+                <span class="k">WhatsApp</span>
+                <span class="v"><a href="https://wa.me/919390560625" target="_blank" rel="noopener noreferrer">+91 93905 60625 (Instant Chat)</a></span>
+              </div>
+              <div class="r">
+                <span class="k">Email</span>
+                <span class="v m"><a href="mailto:contact@sparksalon.in">contact@sparksalon.in</a></span>
+              </div>
+            </div>
+
+            <!-- Live Hours Card -->
+            <div class="hrs" id="hours-widget">
+              <div class="st">
+                <span class="dot" id="live-dot"></span>
+                <span id="live-status-text">Checking salon status...</span>
+              </div>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Tuesday – Sunday</td>
+                    <td>9:30 AM – 9:00 PM</td>
+                  </tr>
+                  <tr>
+                    <td>Monday</td>
+                    <td>10:00 AM – 8:00 PM</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
 
-        <div class="co-grid">
-          <div class="co-info rv" data-d="1">
-            <div class="co-status" id="co-status">
-              <span class="co-dot"></span>
-              <b id="co-stat-text">Checking live salon status...</b>
-            </div>
-
-            <div class="co-item">
-              <div class="co-icon"><svg><use href="#i-clock"/></svg></div>
-              <div>
-                <h5>Operating Hours</h5>
-                <p>Tuesday – Sunday: 9:30 AM – 9:00 PM</p>
-                <p>Monday: 10:00 AM – 8:00 PM</p>
-              </div>
-            </div>
-
-            <div class="co-item">
-              <div class="co-icon"><svg><use href="#i-crown"/></svg></div>
-              <div>
-                <h5>Location</h5>
-                <p>SPARK Unisex Salon, 2nd Floor, Opposite City Centre</p>
-                <p>Main Commercial Boulevard, Visakhapatnam — 530016</p>
-              </div>
-            </div>
-
-            <div class="co-item">
-              <div class="co-icon"><svg><use href="#i-chat"/></svg></div>
-              <div>
-                <h5>Direct Concierge</h5>
-                <p>Telephone: <a href="tel:+919390560625">+91 93905 60625</a></p>
-                <p>WhatsApp: <a href="https://wa.me/919390560625" target="_blank">Direct Concierge Chat</a></p>
-                <p>Email: <a href="mailto:contact@sparksalon.in">contact@sparksalon.in</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="co-map rv" data-d="2">
+          <!-- Google Maps Iframe Column -->
+          <div class="map rv">
             <iframe
               title="SPARK Unisex Salon Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121570.82522770857!2d83.21848154999999!3d17.7385966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3943138902b197%3A0x68590d676830c1e2!2sVisakhapatnam%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(90%); border-radius: 12px;"
-              allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
@@ -233,29 +237,48 @@
     <!-- FAQ Accordion -->
     <section id="faq" class="sec dk2">
       <div class="wrap">
-        <div class="sh rv">
-          <div>
-            <span class="tag">Guest Queries</span>
-            <h2 class="h2">Frequently Asked <em>Questions</em></h2>
-            <p class="sub">Everything you need to know before visiting SPARK.</p>
+        <div class="sh" style="margin-bottom:0">
+          <div class="rv">
+            <p class="tag">Questions &amp; Clarity</p>
+            <h2 class="h2">Everything You <em>Need to Know</em></h2>
+            <p class="sub">Transparent answers about our hygiene, appointment timings, and formulations.</p>
           </div>
         </div>
-        <div class="faq-list" id="faq-list">
-          <details class="faq-item rv">
-            <summary>Do I need to book in advance or do you accept walk-ins?</summary>
-            <p>While we welcome walk-ins whenever chair availability allows, we strongly recommend reserving in advance—especially for French Balayage, Keratin treatments, and weekend slots—so our master stylists can dedicate unhurried time to your hair.</p>
+
+        <div class="faq">
+          <details class="rv" open>
+            <summary>Do I need to book in advance or do you accept walk-in clients?</summary>
+            <p>
+              We welcome walk-ins based on real-time chair availability. However, to guarantee dedicated 1-on-1 consultation time with our senior colorists or for extensive services like Balayage, Keratin, and Bridal styling, we strongly encourage reserving 24–48 hours ahead.
+            </p>
           </details>
-          <details class="faq-item rv">
-            <summary>What haircare formulations do you use?</summary>
-            <p>We are an authorized partner of L'Oréal Professionnel Paris. All chemical services, color treatments, and hair spas use 100% sealed, authentic imported formulations including Metal Detox, Inoa ammonia-free color, and Botoplex collagen.</p>
+
+          <details class="rv">
+            <summary>Which product brands and chemical formulations do you use?</summary>
+            <p>
+              We use 100% genuine, authorized professional products — primarily L'Oréal Professionnel Paris (Inoa ammonia-free color, Metal Detox, Serie Expert), genuine Brazilian Botoplex collagen, and dermatologically tested skincare lines.
+            </p>
           </details>
-          <details class="faq-item rv">
+
+          <details class="rv">
+            <summary>Are services customized for both men and women?</summary>
+            <p>
+              Yes, SPARK is a premier unisex salon. We feature dedicated zones for gentlemen’s barbering, hot towel beard sculpting, textured hair artistry, clinical medi-facials, and private bridal makeup suites.
+            </p>
+          </details>
+
+          <details class="rv">
             <summary>Is there dedicated parking available at the salon?</summary>
-            <p>Yes. We offer reserved basement guest parking and complimentary valet service right at our entrance opposite City Centre on the main boulevard.</p>
+            <p>
+              Yes. We offer reserved basement guest parking and complimentary valet service right at our entrance opposite City Centre on the main boulevard.
+            </p>
           </details>
-          <details class="faq-item rv">
+
+          <details class="rv">
             <summary>How does the First-Time Guest Privilege work?</summary>
-            <p>First-time visitors enjoy 20% savings on their initial signature service. Simply mention promo code SPARKFIRST when booking online or present it at reception upon arrival.</p>
+            <p>
+              First-time visitors enjoy 20% savings on their initial signature service. Simply mention promo code SPARKFIRST when booking online or present it at reception upon arrival.
+            </p>
           </details>
         </div>
       </div>
@@ -282,6 +305,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About &amp; Story</a></li>
             <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
             <li><a href="space.html">Our Space</a></li>
             <li><a href="offers.html">Special Offers</a></li>
             <li><a href="book.html">Book Appointment</a></li>
@@ -343,17 +367,22 @@
   <!-- Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Lightbox Modal -->
-  <dialog class="lb" id="lightbox" aria-label="Media preview">
-    <div class="lb-cnt" id="lb-cnt">
-      <figure id="lb-fig"></figure>
-      <div class="lb-txt" id="lb-txt">
-        <h4 id="lb-cap"></h4>
-        <p id="lb-cat"></p>
-        <p id="lb-desc"></p>
-      </div>
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
     </div>
-    <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
   </dialog>
 
   <!-- External Application Logic -->

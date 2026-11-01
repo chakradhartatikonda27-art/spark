@@ -114,6 +114,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="space.html">Our Space</a>
         <a href="offers.html">Offers</a>
         <a href="contact.html">Contact</a>
@@ -141,6 +142,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="space.html">Our Space</a>
       <a href="offers.html">Offers</a>
       <a href="contact.html">Contact</a>
@@ -170,126 +172,153 @@
     <!-- Booking Section -->
     <section id="book" class="sec" style="background: var(--cream);">
       <div class="wrap">
-        <div class="book-grid">
-          <div class="book-form-wrap rv">
-            <div class="book-form-head">
-              <span class="tag">Online Reservation</span>
-              <h2 class="h2" style="font-size: 2rem;">Book Your <em>Appointment</em></h2>
-              <p class="sub" style="margin-top: 8px;">No upfront deposit required. Instant confirmation via SMS &amp; WhatsApp.</p>
+        <div class="bk">
+          <!-- Booking Left Column -->
+          <div>
+            <div class="rv">
+              <p class="tag">Priority Reservations</p>
+              <h2 class="h2">Reserve Your <em>Signature</em> Session</h2>
+              <p class="sub">
+                Step into refined luxury. Book online in 60 seconds and our concierge team will reserve your designated specialist.
+              </p>
             </div>
-            
-            <form id="book-form" class="b-form" novalidate>
-              <div class="field">
-                <label for="b-name">Your Full Name *</label>
-                <input id="b-name" type="text" placeholder="e.g. Priya Sharma" required autocomplete="name" />
-                <span class="fe">Please enter your name.</span>
-              </div>
 
-              <div class="f-row">
-                <div class="field">
-                  <label for="b-phone">Phone Number (WhatsApp) *</label>
-                  <input id="b-phone" type="tel" placeholder="+91 98765 43210" required pattern="^[0-9+\s-]{10,15}$" autocomplete="tel" />
-                  <span class="fe">Please provide a valid contact number.</span>
-                </div>
-                <div class="field">
-                  <label for="b-email">Email Address (Optional)</label>
-                  <input id="b-email" type="email" placeholder="priya@example.com" autocomplete="email" />
+            <div class="steps">
+              <div class="step rv" data-d="1">
+                <i>1</i>
+                <div>
+                  <b>Select Preferred Treatment</b>
+                  <span>Choose from hair, aesthetics, skin, or complete bridal packages.</span>
                 </div>
               </div>
-
-              <div class="f-row">
-                <div class="field">
-                  <label for="b-service">Select Treatment *</label>
-                  <select id="b-service" required>
-                    <option value="" disabled selected>Choose a service</option>
-                    <optgroup label="Hair Artistry">
-                      <option value="Dimensional French Balayage">Dimensional French Balayage (₹6,500+)</option>
-                      <option value="Botoplex Hair Collagen Therapy">Botoplex Hair Collagen Therapy (₹4,200+)</option>
-                      <option value="Couture Scissor Cut &amp; Finish">Couture Scissor Cut &amp; Finish (₹1,200)</option>
-                      <option value="L'Oreal Deep Nourishing Hair Spa">L'Oreal Deep Nourishing Hair Spa (₹2,100)</option>
-                    </optgroup>
-                    <optgroup label="Skin &amp; Spa">
-                      <option value="Korean Glass Skin Hydra Facial">Korean Glass Skin Hydra Facial (₹3,800)</option>
-                      <option value="Pure Collagen Infusion">Pure Collagen Infusion (₹2,900)</option>
-                    </optgroup>
-                    <optgroup label="Nails &amp; Makeup">
-                      <option value="Russian Gel Nail Extension">Russian Gel Nail Extension (₹2,400)</option>
-                      <option value="Airbrush HD Event Makeup">Airbrush HD Event Makeup (₹6,000)</option>
-                    </optgroup>
-                    <optgroup label="Men's Grooming">
-                      <option value="Executive Fade &amp; Charcoal Shave">Executive Fade &amp; Charcoal Shave (₹1,500)</option>
-                    </optgroup>
-                  </select>
-                  <span class="fe">Please choose a service.</span>
-                </div>
-                <div class="field">
-                  <label for="b-stylist">Preferred Specialist</label>
-                  <select id="b-stylist">
-                    <option value="Any Master Stylist" selected>Any Master Stylist</option>
-                    <option value="Suresh Uppala (Creative Director)">Suresh Uppala (Creative Director)</option>
-                    <option value="Priya Sharma (Colorist)">Priya Sharma (Colorist)</option>
-                    <option value="Rahul Varma (Men's Lead)">Rahul Varma (Men's Lead)</option>
-                    <option value="Ananya Reddy (Skin &amp; Bridal)">Ananya Reddy (Skin &amp; Bridal)</option>
-                  </select>
+              <div class="step rv" data-d="2">
+                <i>2</i>
+                <div>
+                  <b>Choose Preferred Date &amp; Time</b>
+                  <span>Flexible morning, afternoon, or evening lounge slots available.</span>
                 </div>
               </div>
-
-              <div class="f-row">
-                <div class="field">
-                  <label for="b-date">Preferred Date *</label>
-                  <input id="b-date" type="date" required />
-                  <span class="fe">Select an appointment date.</span>
+              <div class="step rv" data-d="3">
+                <i>3</i>
+                <div>
+                  <b>Instant WhatsApp Confirmation</b>
+                  <span>Direct calendar invite and reminders sent straight to your mobile.</span>
                 </div>
-                <div class="field">
-                  <label for="b-time">Preferred Time Slot *</label>
-                  <select id="b-time" required>
-                    <option value="10:00 AM">10:00 AM (Morning Calm)</option>
-                    <option value="11:30 AM" selected>11:30 AM</option>
-                    <option value="1:00 PM">1:00 PM</option>
-                    <option value="2:30 PM">2:30 PM</option>
-                    <option value="4:00 PM">4:00 PM</option>
-                    <option value="5:30 PM">5:30 PM (Evening Glow)</option>
-                    <option value="7:00 PM">7:00 PM</option>
-                    <option value="8:00 PM">8:00 PM</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="b-notes">Special Requests / Hair History</label>
-                <textarea id="b-notes" rows="3" placeholder="e.g. Previous chemical treatments, allergies, or reference pictures..."></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-gold btn-block">
-                <span>Confirm Appointment Request</span>
-                <svg><use href="#arr"/></svg>
-              </button>
-            </form>
-
-            <div class="book-res" id="book-res" style="display:none;">
-              <div class="book-res-icon"><svg><use href="#i-crown"/></svg></div>
-              <h3>Reservation Request Received!</h3>
-              <p id="res-summary">Thank you! Our salon concierge will confirm your slot via WhatsApp shortly.</p>
-              <div style="margin-top:20px; display:flex; gap:10px; justify-content:center;">
-                <a href="https://wa.me/919390560625" class="btn btn-gold">Confirm on WhatsApp</a>
-                <button type="button" class="btn btn-ol" id="b-again">Book Another</button>
               </div>
             </div>
           </div>
 
-          <!-- Aside Policies -->
-          <div class="book-aside rv">
-            <div class="book-aside-card">
-              <h4>Flexible Rescheduling</h4>
-              <p>Cancel or reschedule without fee up to 2 hours before your appointment.</p>
-            </div>
-            <div class="book-aside-card">
-              <h4>Diagnostic Consultation</h4>
-              <p>Every service includes a complimentary 10-minute hair/scalp consultation.</p>
-            </div>
-            <div class="book-aside-card">
-              <h4>Direct Concierge Helpline</h4>
-              <p>Need urgent assistance? Call our front desk directly at <a href="tel:+919390560625">+91 93905 60625</a>.</p>
+          <!-- Booking Right Column (Form Card) -->
+          <div class="form-card rv">
+            <form id="booking-form" novalidate>
+              <div class="fgrid">
+                <div>
+                  <label class="label" for="b-name">Your Full Name *</label>
+                  <input
+                    class="field"
+                    type="text"
+                    id="b-name"
+                    name="name"
+                    placeholder="e.g. Radhika Sharma"
+                    required
+                    autocomplete="name"
+                  />
+                  <div class="fe">Please enter your full name.</div>
+                </div>
+
+                <div>
+                  <label class="label" for="b-phone">WhatsApp / Mobile Number *</label>
+                  <input
+                    class="field"
+                    type="tel"
+                    id="b-phone"
+                    name="phone"
+                    placeholder="e.g. 93905 60625"
+                    pattern="[0-9]{10}"
+                    required
+                    autocomplete="tel"
+                  />
+                  <div class="fe">Please provide a valid 10-digit mobile number.</div>
+                </div>
+
+                <div class="full">
+                  <label class="label" for="b-service">Desired Treatment *</label>
+                  <select class="field" id="b-service" name="service" required>
+                    <option value="" disabled selected>Select from our signature services...</option>
+                    <optgroup label="Hair Care &amp; Color">
+                      <option value="Couture Precision Haircut & Styling">Couture Precision Haircut &amp; Styling (₹850)</option>
+                      <option value="French Balayage & Tonal Gloss">French Balayage &amp; Tonal Gloss (₹3,800+)</option>
+                      <option value="Global Color & Ammonia-Free Gloss">Global Color &amp; Gloss (₹2,600+)</option>
+                      <option value="Keratin Smooth Therapy">Keratin Smooth Therapy (₹4,500+)</option>
+                      <option value="Botoplex Collagen Reconstruction">Botoplex Collagen Reconstruction (₹3,900+)</option>
+                    </optgroup>
+                    <optgroup label="Skin &amp; Aesthetics">
+                      <option value="Glass Glow Oxygenating Medi-Facial">Glass Glow Oxygenating Medi-Facial (₹2,400)</option>
+                      <option value="Collagen Radiance Firming Ritual">Collagen Radiance Firming Ritual (₹3,200)</option>
+                      <option value="Detox Charcoal Deep Cleanse">Detox Charcoal Deep Cleanse (₹1,800)</option>
+                    </optgroup>
+                    <optgroup label="Gentlemen's Grooming">
+                      <option value="Master Barber Fade & Wash">Master Barber Fade &amp; Wash (₹450)</option>
+                      <option value="Hot Towel Beard Crafting & Oil Press">Hot Towel Beard Crafting (₹350)</option>
+                    </optgroup>
+                    <optgroup label="Bridal &amp; Special Occasions">
+                      <option value="Signature HD Bridal Airbrush Glamour">Signature HD Bridal Airbrush Glamour (₹12,000+)</option>
+                      <option value="Pre-Bridal Radiance Glow Ceremony">Pre-Bridal Radiance Ceremony (₹8,500)</option>
+                    </optgroup>
+                  </select>
+                  <div class="fe">Please select a service.</div>
+                </div>
+
+                <div>
+                  <label class="label" for="b-date">Preferred Date *</label>
+                  <input class="field" type="date" id="b-date" name="date" required />
+                  <div class="fe">Please select a valid date.</div>
+                </div>
+
+                <div>
+                  <label class="label" for="b-time">Preferred Time Slot *</label>
+                  <select class="field" id="b-time" name="time" required>
+                    <option value="" disabled selected>Select time window...</option>
+                    <option value="10:00 AM – 12:00 PM">Morning (10:00 AM – 12:00 PM)</option>
+                    <option value="12:00 PM – 02:00 PM">Afternoon (12:00 PM – 02:00 PM)</option>
+                    <option value="02:00 PM – 05:00 PM">Evening (02:00 PM – 05:00 PM)</option>
+                    <option value="05:00 PM – 08:30 PM">Night Glow (05:00 PM – 08:30 PM)</option>
+                  </select>
+                  <div class="fe">Please pick a time slot.</div>
+                </div>
+
+                <div class="full">
+                  <label class="label" for="b-notes">Special Requests / Hair Concerns (Optional)</label>
+                  <textarea
+                    class="field"
+                    id="b-notes"
+                    name="notes"
+                    rows="3"
+                    placeholder="Share past hair treatments, scalp sensitivity, or inspiration..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="factions">
+                <p>No deposit needed for standard salon consultations. Complimentary organic beverage upon arrival.</p>
+                <button type="submit" class="btn btn-gold">
+                  <span>Confirm Reservation</span>
+                  <div class="spin" aria-hidden="true"></div>
+                </button>
+              </div>
+            </form>
+
+            <!-- Success Confirmation State -->
+            <div class="result" id="booking-result">
+              <div class="ok"><svg><use href="#i-check"/></svg></div>
+              <h3>Reservation Request Received!</h3>
+              <p id="res-summary">Your appointment has been logged. Our concierge will message you on WhatsApp shortly.</p>
+              <div class="ctas">
+                <a href="https://wa.me/919390560625" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+                  Chat on WhatsApp
+                </a>
+                <button type="button" class="again" id="booking-again">Book Another Treatment</button>
+              </div>
             </div>
           </div>
         </div>
@@ -317,6 +346,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About &amp; Story</a></li>
             <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
             <li><a href="space.html">Our Space</a></li>
             <li><a href="offers.html">Special Offers</a></li>
             <li><a href="book.html">Book Appointment</a></li>
@@ -378,17 +408,22 @@
   <!-- Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Lightbox Modal -->
-  <dialog class="lb" id="lightbox" aria-label="Media preview">
-    <div class="lb-cnt" id="lb-cnt">
-      <figure id="lb-fig"></figure>
-      <div class="lb-txt" id="lb-txt">
-        <h4 id="lb-cap"></h4>
-        <p id="lb-cat"></p>
-        <p id="lb-desc"></p>
-      </div>
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
     </div>
-    <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
   </dialog>
 
   <!-- External Application Logic -->

@@ -114,6 +114,7 @@
         <a href="index.html">Home</a>
         <a href="about.html" class="active" aria-current="page">About</a>
         <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="space.html">Our Space</a>
         <a href="offers.html">Offers</a>
         <a href="contact.html">Contact</a>
@@ -141,6 +142,7 @@
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="space.html">Our Space</a>
       <a href="offers.html">Offers</a>
       <a href="contact.html">Contact</a>
@@ -206,7 +208,7 @@
             <p class="sub">Decades of cumulative precision, continuous academy training, and intuitive aesthetic vision.</p>
           </div>
         </div>
-        <div class="team" id="team-grid"></div>
+        <div class="team" id="team"></div>
       </div>
     </section>
 
@@ -221,34 +223,34 @@
             <p class="sub">Elevating every appointment into an unhurried, transformative ritual.</p>
           </div>
         </div>
-        <div class="why-grid">
-          <div class="why-badge rv" data-d="1">
-            <div class="icon-box"><svg><use href="#i-scissors"/></svg></div>
+        <div class="feat">
+          <div class="rv" data-d="1">
+            <div class="i"><svg><use href="#i-scissors"/></svg></div>
             <b>Professional beauty &amp; grooming</b>
             <span>Trained professionals</span>
           </div>
-          <div class="why-badge rv" data-d="2">
-            <div class="icon-box"><svg><use href="#i-user"/></svg></div>
+          <div class="rv" data-d="2">
+            <div class="i"><svg><use href="#i-user"/></svg></div>
             <b>Personalised styling</b>
             <span>Consultation first</span>
           </div>
-          <div class="why-badge rv" data-d="3">
-            <div class="icon-box"><svg><use href="#i-heart"/></svg></div>
+          <div class="rv" data-d="3">
+            <div class="i"><svg><use href="#i-heart"/></svg></div>
             <b>Welcoming unisex environment</b>
             <span>Comfortable for everyone</span>
           </div>
-          <div class="why-badge rv" data-d="1">
-            <div class="icon-box"><svg><use href="#i-sparkle"/></svg></div>
+          <div class="rv" data-d="1">
+            <div class="i"><svg><use href="#i-sparkle"/></svg></div>
             <b>Modern salon atmosphere</b>
             <span>Calm, contemporary interiors</span>
           </div>
-          <div class="why-badge rv" data-d="2">
-            <div class="icon-box"><svg><use href="#i-chat"/></svg></div>
+          <div class="rv" data-d="2">
+            <div class="i"><svg><use href="#i-chat"/></svg></div>
             <b>Customer-focused experience</b>
             <span>Clear, attentive service</span>
           </div>
-          <div class="why-badge rv" data-d="3">
-            <div class="icon-box"><svg><use href="#i-eye"/></svg></div>
+          <div class="rv" data-d="3">
+            <div class="i"><svg><use href="#i-eye"/></svg></div>
             <b>Attention to detail</b>
             <span>From consult to finish</span>
           </div>
@@ -286,6 +288,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About &amp; Story</a></li>
             <li><a href="services.html">Services Menu</a></li>
+            <li><a href="portfolio.html">Client Portfolio</a></li>
             <li><a href="space.html">Our Space</a></li>
             <li><a href="offers.html">Special Offers</a></li>
             <li><a href="book.html">Book Appointment</a></li>
@@ -347,17 +350,22 @@
   <!-- Toast Notification -->
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Lightbox Modal -->
-  <dialog class="lb" id="lightbox" aria-label="Media preview">
-    <div class="lb-cnt" id="lb-cnt">
-      <figure id="lb-fig"></figure>
-      <div class="lb-txt" id="lb-txt">
-        <h4 id="lb-cap"></h4>
-        <p id="lb-cat"></p>
-        <p id="lb-desc"></p>
-      </div>
+  <!-- Native <dialog> Modal Lightbox -->
+  <dialog class="lb" id="lightbox" aria-labelledby="lb-title">
+    <div class="lb-content">
+      <button type="button" class="x" id="lb-close" aria-label="Close media viewer">✕</button>
+      <button type="button" class="p" id="lb-prev" aria-label="Previous media">‹</button>
+      <button type="button" class="n" id="lb-next" aria-label="Next media">›</button>
+
+      <figure class="lb-figure">
+        <img id="lb-img" src="" alt="Enlarged salon showcase" style="display:none" />
+        <video id="lb-video" controls playsinline style="display:none; width: 100%; border-radius: 6px;"></video>
+        <figcaption class="lb-caption">
+          <span id="lb-title">Master Hair Artistry</span>
+          <span id="lb-cat">SPARK Unisex Salon</span>
+        </figcaption>
+      </figure>
     </div>
-    <button class="lb-close" id="lb-close" aria-label="Close lightbox">&times;</button>
   </dialog>
 
   <!-- External Application Logic -->

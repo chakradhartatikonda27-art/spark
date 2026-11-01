@@ -220,11 +220,11 @@
   const heroBlur = document.getElementById("hero-blur");
   const thumbsContainer = document.getElementById("thumbs");
   const marqueeContainer = document.getElementById("mq");
-  const cardsContainer = document.getElementById("cards");
-  const tabsContainer = document.getElementById("tabs");
+  const cardsContainer = document.getElementById("cards") || document.getElementById("serv-cards");
+  const tabsContainer = document.getElementById("tabs") || document.getElementById("serv-tabs");
   const menuWrap = document.getElementById("menu-wrap");
-  const teamContainer = document.getElementById("team");
-  const galleryContainer = document.getElementById("gal");
+  const teamContainer = document.getElementById("team") || document.getElementById("team-grid");
+  const galleryContainer = document.getElementById("gal") || document.getElementById("gal-grid");
   const lightboxDialog = document.getElementById("lightbox");
   const lbImg = document.getElementById("lb-img");
   const lbVideo = document.getElementById("lb-video");
@@ -233,15 +233,15 @@
   const lbClose = document.getElementById("lb-close");
   const lbPrev = document.getElementById("lb-prev");
   const lbNext = document.getElementById("lb-next");
-  const bookingForm = document.getElementById("booking-form");
-  const bookingResult = document.getElementById("booking-result");
-  const bookingAgain = document.getElementById("booking-again");
+  const bookingForm = document.getElementById("booking-form") || document.getElementById("book-form");
+  const bookingResult = document.getElementById("booking-result") || document.getElementById("book-res");
+  const bookingAgain = document.getElementById("booking-again") || document.getElementById("b-again");
   const bookingServiceSelect = document.getElementById("b-service");
   const toast = document.getElementById("toast");
   const progressBar = document.getElementById("pg");
   const stickyBar = document.getElementById("sbar");
-  const liveStatusDot = document.getElementById("live-dot");
-  const liveStatusText = document.getElementById("live-status-text");
+  const liveStatusDot = document.getElementById("live-dot") || document.querySelector(".co-dot");
+  const liveStatusText = document.getElementById("live-status-text") || document.getElementById("co-stat-text");
 
   let currentGalleryIndex = 0;
 
@@ -261,6 +261,7 @@
     renderGallery();
     setupLightbox();
     setupSpaceVideos();
+    setupPortfolio();
     setupOperatingHours();
     setupBookingForm();
     setupMobileMenu();
@@ -478,8 +479,8 @@
     const sliders = document.querySelectorAll(".ba");
     sliders.forEach((slider) => {
       const input = slider.querySelector("input[type='range']");
-      const afterLayer = slider.querySelector(".af");
-      const handle = slider.querySelector(".hd");
+      const afterLayer = slider.querySelector(".af") || slider.querySelector(".ba-before");
+      const handle = slider.querySelector(".hd") || slider.querySelector(".ba-handle");
 
       if (!input || !afterLayer || !handle) return;
 
@@ -611,6 +612,55 @@
         if (lbNext) lbNext.style.display = "none";
 
         lightboxDialog.showModal();
+      });
+    });
+  }
+
+  function setupPortfolio() {
+    const filterButtons = document.querySelectorAll(".port-btn");
+    const cards = document.querySelectorAll(".port-card");
+
+    if (filterButtons.length && cards.length) {
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          const filter = btn.getAttribute("data-filter");
+
+          cards.forEach((card) => {
+            const cat = card.getAttribute("data-cat");
+            if (filter === "all" || cat === filter) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    }
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const img = card.querySelector(".port-img img");
+        const title = card.querySelector(".port-meta h4");
+        const tag = card.querySelector(".port-tag");
+
+        if (img && lightboxDialog) {
+          if (lbVideo) {
+            lbVideo.style.display = "none";
+            lbVideo.pause();
+          }
+          if (lbImg) {
+            lbImg.src = img.src;
+            lbImg.alt = img.alt || "Portfolio image";
+            lbImg.style.display = "block";
+          }
+          if (lbTitle && title) lbTitle.textContent = title.textContent;
+          if (lbCat && tag) lbCat.textContent = tag.textContent;
+          if (lbPrev) lbPrev.style.display = "none";
+          if (lbNext) lbNext.style.display = "none";
+          lightboxDialog.showModal();
+        }
       });
     });
   }
